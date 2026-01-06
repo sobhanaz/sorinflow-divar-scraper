@@ -341,3 +341,13 @@
 2026-01-06 19:00:11 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.209s
 2026-01-06 19:00:11 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.321s
 2026-01-06 19:00:11 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.378s
+2026-01-06 19:00:19 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.007s
+2026-01-06 19:00:27 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.247s
+2026-01-06 19:00:27 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.282s
+2026-01-06 19:00:49 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-06 19:01:11 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.326s
+2026-01-06 19:01:11 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.418s
+2026-01-06 19:01:19 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.004s
+2026-01-06 19:01:27 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.165s
+2026-01-06 19:01:27 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.181s
+2026-01-06 19:01:49 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
