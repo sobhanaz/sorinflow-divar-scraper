@@ -231,19 +231,33 @@ class DivarScraper:
             logger.info(f"Scraping listing page: {url}")
             
             await self._check_rate_limit()
-            await self.page.goto(url, wait_until="networkidle", timeout=settings.scraper_timeout)
-            await self._human_like_delay(2, 4)
-            await self._simulate_scroll()
             
-            # Wait for listings to load
-            await self.page.wait_for_selector('a.kt-post-card__action', timeout=10000)
+            # Use domcontentloaded for faster loading, then wait for content
+            await self.page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            await asyncio.sleep(3)  # Wait for JS to render
+            await self._simulate_scroll()
+            await asyncio.sleep(2)  # Wait after scroll
+            
+            # Wait for listings to load - try multiple selectors
+            try:
+                await self.page.wait_for_selector('a[href*="/v/"]', timeout=10000)
+            except Exception:
+                logger.warning("Primary selector not found, waiting more...")
+                await asyncio.sleep(5)
             
             # Get page content
             content = await self.page.content()
             soup = BeautifulSoup(content, 'lxml')
             
-            # Find all property cards
+            # Find all property cards - try multiple selectors
             cards = soup.select('a.kt-post-card__action')
+            if not cards:
+                cards = soup.select('div.post-card-item a')
+            if not cards:
+                cards = soup.select('article a[href*="/v/"]')
+            if not cards:
+                # Try finding any links to property pages
+                cards = soup.select('a[href*="/v/"]')
             
             for card in cards:
                 try:
@@ -264,26 +278,26 @@ class DivarScraper:
         """Parse a listing card element"""
         try:
             href = card.get('href', '')
-            if not href:
+            if not href or '/v/' not in href:
                 return None
             
             url = urljoin(self.BASE_URL, href)
             divar_id = self._extract_divar_id(url)
             
-            # Extract basic info
-            title_elem = card.select_one('.kt-post-card__title')
+            # Extract basic info - try multiple selectors
+            title_elem = card.select_one('.kt-post-card__title, .post-title, h2, h3')
             title = title_elem.get_text(strip=True) if title_elem else None
             
             # Extract descriptions (price, rooms, area)
-            descriptions = card.select('.kt-post-card__description')
+            descriptions = card.select('.kt-post-card__description, .post-description, span.description')
             desc_texts = [d.get_text(strip=True) for d in descriptions]
             
             # Extract thumbnail
-            img_elem = card.select_one('.kt-image-block__image')
-            thumbnail_url = img_elem.get('src') if img_elem else None
+            img_elem = card.select_one('.kt-image-block__image, img')
+            thumbnail_url = img_elem.get('src') or img_elem.get('data-src') if img_elem else None
             
             # Extract bottom info
-            bottom_desc = card.select_one('.kt-post-card__bottom-description')
+            bottom_desc = card.select_one('.kt-post-card__bottom-description, .post-location')
             category_hint = bottom_desc.get_text(strip=True) if bottom_desc else None
             
             return {
@@ -305,10 +319,10 @@ class DivarScraper:
             logger.info(f"Scraping property detail: {url}")
             
             await self._check_rate_limit()
-            await self.page.goto(url, wait_until="networkidle", timeout=settings.scraper_timeout)
-            await self._human_like_delay(2, 4)
-            await self._mouse_movement()
+            await self.page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            await asyncio.sleep(2)
             await self._simulate_scroll()
+            await asyncio.sleep(1)
             
             # Get page content
             content = await self.page.content()
@@ -320,8 +334,8 @@ class DivarScraper:
                 "scraped_at": datetime.now().isoformat()
             }
             
-            # Extract title
-            title_elem = soup.select_one('h1.kt-page-title__title')
+            # Extract title - try multiple selectors
+            title_elem = soup.select_one('h1.kt-page-title__title, h1, .post-title')
             if title_elem:
                 property_data["title"] = title_elem.get_text(strip=True)
             
