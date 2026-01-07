@@ -7623,3 +7623,156 @@ DETAIL:  Failing row contains (78, SF-20260107152525-CEF7C6, test, null, مور�
 2026-01-07 19:00:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 2.418s
 2026-01-07 19:00:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 2.434s
 2026-01-07 19:00:27 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.032s
+2026-01-07 19:00:40 | ERROR    | app.scraper.divar_scraper:scrape_property_detail:371 - Failed to scrape property detail: Timeout 30000ms exceeded.
+2026-01-07 19:00:43 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D8%A2%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86-%DB%B1%DB%B5%DB%B6-%D9%85%D8%AA%D8%B1-%D8%B4%DB%8C%D8%AE-%D8%AA%D9%BE%D9%87-%D8%A8%D8%A7%D9%86%D8%AF-%D8%A8%D8%A7%D9%84%D8%A7/QaeBJoIp
+2026-01-07 19:01:02 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.021s
+2026-01-07 19:01:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.927s
+2026-01-07 19:01:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.934s
+2026-01-07 19:01:04 | INFO     | app.scraper.divar_scraper:_get_phone_number:609 - Found visible contact button with selector: .post-actions__get-contact
+2026-01-07 19:01:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.506s
+2026-01-07 19:01:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.495s
+2026-01-07 19:01:07 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 1.503s
+2026-01-07 19:01:08 | INFO     | app.scraper.divar_scraper:_get_phone_number:626 - Contact button clicked successfully with force
+2026-01-07 19:01:14 | INFO     | app.scraper.divar_scraper:_get_phone_number:654 - Debug screenshot saved to /app/data/images/debug_after_click.png
+2026-01-07 19:01:14 | INFO     | app.scraper.divar_scraper:_get_phone_number:664 - No tel: link found in page content after click
+2026-01-07 19:01:14 | INFO     | app.scraper.divar_scraper:_get_phone_number:667 - Modal detected on page
+2026-01-07 19:01:14 | INFO     | app.scraper.divar_scraper:_get_phone_number:672 - Found phone-like patterns: ['6666666667', '6666666667', '3333333333', '10929151095', '10929151095']
+2026-01-07 19:01:33 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.006s
+2026-01-07 19:01:50 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:01:50 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:01:51 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:01:51 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:01:51 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:01:51 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:01:51 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:01:51 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:01:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.149s
+2026-01-07 19:01:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.317s
+2026-01-07 19:02:00 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.222s
+2026-01-07 19:02:05 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.205s
+2026-01-07 19:02:05 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.223s
+2026-01-07 19:02:09 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/jobs/6a32e0f5-a8e3-4e43-b637-0420b69e2c91/cancel - 200 - 0.116s
+2026-01-07 19:02:11 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs/6a32e0f5-a8e3-4e43-b637-0420b69e2c91 - 200 - 0.145s
+2026-01-07 19:02:13 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:02:31 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.213s
+2026-01-07 19:02:37 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.001s
+2026-01-07 19:02:38 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/active-tasks - 200 - 0.001s
+2026-01-07 19:02:38 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.016s
+2026-01-07 19:02:38 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.249s
+2026-01-07 19:02:39 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.002s
+2026-01-07 19:02:39 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.002s
+2026-01-07 19:02:39 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.111s
+2026-01-07 19:02:39 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.131s
+2026-01-07 19:02:42 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.176s
+2026-01-07 19:02:43 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:02:46 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 200 - 0.440s
+2026-01-07 19:02:52 | INFO     | app.scraper.auth:apply_cookies:195 - Cookies applied to browser context
+2026-01-07 19:02:54 | INFO     | app.scraper.auth:restore_session:372 - Session restored successfully for 09058432452
+2026-01-07 19:02:54 | INFO     | app.scraper.divar_scraper:initialize:96 - Session restored successfully
+2026-01-07 19:02:55 | INFO     | app.scraper.divar_scraper:start_scraping_job:903 - Starting scraping job for urmia/buy-apartment
+2026-01-07 19:02:55 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment
+2026-01-07 19:02:57 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/active-tasks - 200 - 0.026s
+2026-01-07 19:02:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.474s
+2026-01-07 19:02:58 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.454s
+2026-01-07 19:02:58 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.803s
+2026-01-07 19:03:09 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/jobs/efffda04-be85-43b7-83b1-0aadd8241f36/cancel - 400 - 0.592s
+2026-01-07 19:03:13 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.001s
+2026-01-07 19:03:13 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.001s
+2026-01-07 19:03:13 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs/efffda04-be85-43b7-83b1-0aadd8241f36 - 200 - 1.134s
+2026-01-07 19:03:14 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.011s
+2026-01-07 19:03:14 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/active-tasks - 200 - 0.004s
+2026-01-07 19:03:14 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.008s
+2026-01-07 19:03:15 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.806s
+2026-01-07 19:03:15 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.899s
+2026-01-07 19:03:15 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.919s
+2026-01-07 19:03:16 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.005s
+2026-01-07 19:03:20 | WARNING  | app.scraper.divar_scraper:scrape_listing_page:245 - Primary selector not found, waiting more...
+2026-01-07 19:03:30 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 9 listings on page 1
+2026-01-07 19:03:32 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=2
+2026-01-07 19:03:33 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs/efffda04-be85-43b7-83b1-0aadd8241f36 - 200 - 0.646s
+2026-01-07 19:03:47 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 19:03:49 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 2
+2026-01-07 19:03:52 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=3
+2026-01-07 19:03:58 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.714s
+2026-01-07 19:03:58 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.718s
+2026-01-07 19:04:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.212s
+2026-01-07 19:04:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.364s
+2026-01-07 19:04:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.458s
+2026-01-07 19:04:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.460s
+2026-01-07 19:04:04 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.496s
+2026-01-07 19:04:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.507s
+2026-01-07 19:04:05 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 39 listings on page 3
+2026-01-07 19:04:09 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=4
+2026-01-07 19:04:14 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.632s
+2026-01-07 19:04:14 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.655s
+2026-01-07 19:04:18 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:04:23 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 48 listings on page 4
+2026-01-07 19:04:28 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=5
+2026-01-07 19:04:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.076s
+2026-01-07 19:04:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.074s
+2026-01-07 19:04:50 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.042s
+2026-01-07 19:04:58 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 48 listings on page 5
+2026-01-07 19:05:02 | INFO     | app.scraper.divar_scraper:start_scraping_job:927 - Found 195 total listings
+2026-01-07 19:05:02 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D8%A2%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86-%DB%B1%DB%B8%DB%B0%D9%85%D8%AA%D8%B1%DB%8C-%D8%AA%DA%A9-%D9%88%D8%A7%D8%AD%D8%AF%DB%8C/Qaetap8d
+2026-01-07 19:05:15 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.040s
+2026-01-07 19:05:15 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.039s
+2026-01-07 19:05:18 | INFO     | app.scraper.divar_scraper:_get_phone_number:609 - Found visible contact button with selector: .post-actions__get-contact
+2026-01-07 19:05:21 | INFO     | app.scraper.divar_scraper:_get_phone_number:626 - Contact button clicked successfully with force
+2026-01-07 19:05:22 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.005s
+2026-01-07 19:05:24 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:05:24 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:05:25 | INFO     | app.scraper.divar_scraper:_get_phone_number:654 - Debug screenshot saved to /app/data/images/debug_after_click.png
+2026-01-07 19:05:25 | INFO     | app.scraper.divar_scraper:_get_phone_number:664 - No tel: link found in page content after click
+2026-01-07 19:05:25 | INFO     | app.scraper.divar_scraper:_get_phone_number:667 - Modal detected on page
+2026-01-07 19:05:25 | INFO     | app.scraper.divar_scraper:_get_phone_number:672 - Found phone-like patterns: ['6666666667', '6666666667', '3333333333', '10929151095', '10929151095']
+2026-01-07 19:05:27 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:05:27 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:05:28 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:05:28 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:05:29 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:05:29 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:05:45 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:05:45 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:05:45 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:05:45 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:05:45 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:05:45 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:05:45 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:05:46 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:05:48 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 200 - 0.390s
+2026-01-07 19:05:52 | INFO     | app.scraper.auth:apply_cookies:195 - Cookies applied to browser context
+2026-01-07 19:05:54 | INFO     | app.scraper.auth:restore_session:372 - Session restored successfully for 09058432452
+2026-01-07 19:05:54 | INFO     | app.scraper.divar_scraper:initialize:96 - Session restored successfully
+2026-01-07 19:05:54 | INFO     | app.scraper.divar_scraper:start_scraping_job:903 - Starting scraping job for urmia/buy-apartment
+2026-01-07 19:05:54 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment
+2026-01-07 19:06:07 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs/f3b396c0-3db7-402b-b8a6-eaf2e3f550f9 - 200 - 0.630s
+2026-01-07 19:06:07 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 19:06:07 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/jobs/f3b396c0-3db7-402b-b8a6-eaf2e3f550f9/cancel - 400 - 0.242s
+2026-01-07 19:06:11 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 9 listings on page 1
+2026-01-07 19:06:13 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs/f3b396c0-3db7-402b-b8a6-eaf2e3f550f9 - 200 - 0.297s
+2026-01-07 19:06:13 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=2
+2026-01-07 19:06:14 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.344s
+2026-01-07 19:06:14 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.587s
+2026-01-07 19:06:18 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.001s
+2026-01-07 19:06:18 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.001s
+2026-01-07 19:06:19 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.003s
+2026-01-07 19:06:19 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.008s
+2026-01-07 19:06:19 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.622s
+2026-01-07 19:06:19 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.612s
+2026-01-07 19:06:19 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.279s
+2026-01-07 19:06:27 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 48 listings on page 2
+2026-01-07 19:06:28 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.141s
+2026-01-07 19:06:29 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=3
+2026-01-07 19:06:38 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.014s
+2026-01-07 19:06:40 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 45 listings on page 3
+2026-01-07 19:06:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.270s
+2026-01-07 19:06:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.352s
+2026-01-07 19:06:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.168s
+2026-01-07 19:06:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.232s
+2026-01-07 19:06:43 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=4
+2026-01-07 19:06:56 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 45 listings on page 4
+2026-01-07 19:07:01 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=5
+2026-01-07 19:07:10 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.010s
+2026-01-07 19:07:20 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.122s
+2026-01-07 19:07:20 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.120s
+2026-01-07 19:07:30 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 5

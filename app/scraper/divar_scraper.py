@@ -870,15 +870,28 @@ class DivarScraper:
         city: str,
         category: str,
         max_pages: int = 10,
-        download_images: bool = True
+        download_images: bool = True,
+        job_id: Optional[str] = None
     ) -> ScrapingJob:
         """Start a complete scraping job for a city and category"""
         
-        # Create job record
-        job = ScrapingJob(
-            status="running",
-            started_at=datetime.now()
-        )
+        # Get or create job record
+        if job_id:
+            # Use existing job
+            result = await self.db_session.execute(
+                select(ScrapingJob).where(ScrapingJob.job_id == job_id)
+            )
+            job = result.scalar_one_or_none()
+            if not job:
+                raise ValueError(f"Job {job_id} not found")
+            job.status = "running"
+            job.started_at = datetime.now()
+        else:
+            # Create new job record
+            job = ScrapingJob(
+                status="running",
+                started_at=datetime.now()
+            )
         
         # Get city and category IDs
         city_result = await self.db_session.execute(

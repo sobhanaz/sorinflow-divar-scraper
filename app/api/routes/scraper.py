@@ -19,7 +19,7 @@ router = APIRouter()
 settings = get_settings()
 logger = logging.getLogger(__name__)
 
-# Store active scraping tasks (job_id -> asyncio.Task)
+# Store active scraping job IDs for tracking
 active_tasks = {}
 
 
@@ -47,6 +47,7 @@ async def run_scraping_job(
         try:
             await scraper.initialize()
             await scraper.start_scraping_job(
+                job_id=job_id,
                 city=city,
                 category=category,
                 max_pages=max_pages,
@@ -97,18 +98,20 @@ async def start_scraping_job(
     # Start background task
     job_id = str(job.job_id)
     
-    # Create and store the asyncio task
-    task = asyncio.create_task(
-        run_scraping_job(
-            job_id,
-            job_config.city,
-            job_config.category,
-            job_config.max_pages,
-            job_config.download_images,
-            settings.database_url
-        )
+    # Create background task that will run the scraping
+    # Store a placeholder to track active jobs
+    active_tasks[job_id] = {"status": "starting"}
+    
+    # Use background_tasks to run the job
+    background_tasks.add_task(
+        run_scraping_job,
+        job_id,
+        job_config.city,
+        job_config.category,
+        job_config.max_pages,
+        job_config.download_images,
+        settings.database_url
     )
-    active_tasks[job_id] = task
     
     return ScrapingJobResponse(
         id=job.id,
@@ -214,16 +217,11 @@ async def cancel_scraping_job(
     job.completed_at = datetime.now()
     await db.commit()
     
-    # Cancel the actual asyncio task
+    # Remove from active tasks tracking
+    # The scraper will check job status in the database and stop
     if job_id in active_tasks:
-        task = active_tasks[job_id]
-        if not task.done():
-            task.cancel()
-            try:
-                await task
-            except asyncio.CancelledError:
-                logger.info(f"Task {job_id} cancelled successfully")
         del active_tasks[job_id]
+        logger.info(f"Job {job_id} marked for cancellation")
     
     return {"message": "Job cancelled successfully"}
 
