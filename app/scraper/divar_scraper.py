@@ -331,7 +331,7 @@ class DivarScraper:
             property_data = {
                 "url": url,
                 "divar_id": self._extract_divar_id(url),
-                "scraped_at": datetime.now().isoformat()
+                "scraped_at": datetime.now()
             }
             
             # Extract title - try multiple selectors
@@ -542,6 +542,8 @@ class DivarScraper:
         try:
             # Try multiple selectors for contact button
             contact_selectors = [
+                '.post-actions__get-contact',  # Most specific first
+                'button.kt-button--primary:has-text("اطلاعات تماس")',
                 'button:has-text("اطلاعات تماس")',
                 'button:has-text("شماره تماس")',
                 'button:has-text("تماس")',
@@ -555,29 +557,101 @@ class DivarScraper:
                 try:
                     contact_button = await self.page.query_selector(selector)
                     if contact_button:
-                        logger.debug(f"Found contact button with selector: {selector}")
-                        break
+                        is_visible = await contact_button.is_visible()
+                        if is_visible:
+                            logger.info(f"Found visible contact button with selector: {selector}")
+                            break
+                        contact_button = None
                 except Exception:
                     continue
             
             if contact_button:
-                await self._human_like_delay(0.5, 1)
-                await contact_button.click()
-                await asyncio.sleep(3)  # Wait longer for modal/response
+                await self._human_like_delay(0.3, 0.8)
                 
-                # Try multiple selectors for phone number
+                # Use force click and scroll into view
+                try:
+                    # Scroll button into view first
+                    await contact_button.scroll_into_view_if_needed()
+                    await asyncio.sleep(0.3)
+                    
+                    # Try regular click with force
+                    await contact_button.click(force=True, timeout=5000)
+                    logger.info("Contact button clicked successfully with force")
+                except Exception as click_err:
+                    logger.warning(f"Force click failed, trying dispatchEvent: {click_err}")
+                    try:
+                        # Try dispatching a click event directly
+                        await self.page.evaluate('''(el) => {
+                            el.dispatchEvent(new MouseEvent('click', {
+                                view: window,
+                                bubbles: true,
+                                cancelable: true
+                            }));
+                        }''', contact_button)
+                        logger.info("dispatchEvent click executed")
+                    except Exception as dispatch_err:
+                        logger.warning(f"dispatchEvent also failed: {dispatch_err}")
+                
+                # Wait for network to settle after click
+                try:
+                    await self.page.wait_for_load_state('networkidle', timeout=5000)
+                except Exception:
+                    pass
+                
+                await asyncio.sleep(3)  # Wait longer for modal/response to load
+                
+                # Save screenshot for debugging
+                try:
+                    debug_screenshot = self.images_dir / "debug_after_click.png"
+                    await self.page.screenshot(path=str(debug_screenshot))
+                    logger.info(f"Debug screenshot saved to {debug_screenshot}")
+                except Exception:
+                    pass
+                
+                # Log current page content for debugging
+                try:
+                    page_content = await self.page.content()
+                    if 'tel:' in page_content:
+                        logger.info("Phone number link found in page content")
+                    else:
+                        logger.info("No tel: link found in page content after click")
+                        # Check for modal or overlay
+                        if 'kt-new-modal' in page_content or 'kt-modal' in page_content:
+                            logger.info("Modal detected on page")
+                        # Check for any 09 phone patterns (Persian or English)
+                        import re
+                        phone_patterns = re.findall(r'[۰-۹0-9]{10,11}', page_content)
+                        if phone_patterns:
+                            logger.info(f"Found phone-like patterns: {phone_patterns[:5]}")
+                except Exception:
+                    pass
+                
+                # Try multiple selectors for phone number - expanded list
                 phone_selectors = [
                     'a[href^="tel:"]',
                     '.kt-unexpandable-row__action a[href^="tel:"]',
                     '[data-testid="phone-number"]',
                     '.kt-base-row a[href^="tel:"]',
                     'a.kt-unexpandable-row__action-btn',
+                    '.post-actions__phone a',
+                    'a[class*="phone"]',
+                    # Modal-based selectors
+                    '.kt-new-modal a[href^="tel:"]',
+                    '.kt-modal a[href^="tel:"]',
+                    '.kt-dimmer a[href^="tel:"]',
+                    '[role="dialog"] a[href^="tel:"]',
+                    # Text-based selectors
+                    'span:has-text("09")',
+                    'p:has-text("09")',
+                    'div:has-text("۰۹")',
                 ]
                 
+                phone_found = False
                 for selector in phone_selectors:
                     try:
-                        phone_elem = await self.page.wait_for_selector(selector, timeout=3000)
+                        phone_elem = await self.page.wait_for_selector(selector, timeout=2000)
                         if phone_elem:
+                            logger.info(f"Found phone element with selector: {selector}")
                             # Get href attribute for cleaner phone extraction
                             href = await phone_elem.get_attribute('href')
                             if href and href.startswith('tel:'):
@@ -585,23 +659,57 @@ class DivarScraper:
                             else:
                                 phone_text = await phone_elem.inner_text()
                             
+                            logger.info(f"Raw phone text: {phone_text}")
+                            
                             # Convert Persian numbers
                             phone = self._parse_persian_number(phone_text)
                             if phone:
                                 phone_str = str(phone)
                                 # Ensure proper format
                                 if len(phone_str) == 10 and not phone_str.startswith('0'):
+                                    logger.info(f"Extracted phone number: 0{phone_str}")
                                     return f"0{phone_str}"
                                 elif len(phone_str) == 11 and phone_str.startswith('0'):
+                                    logger.info(f"Extracted phone number: {phone_str}")
                                     return phone_str
                                 elif len(phone_str) >= 10:
+                                    logger.info(f"Extracted phone number: {phone_str}")
                                     return phone_str
-                            logger.debug(f"Found phone: {phone_text}")
+                            phone_found = True
                             break
-                    except Exception:
+                    except Exception as e:
                         continue
+                
+                # Last resort: try to extract phone from page content using regex
+                if not phone_found:
+                    try:
+                        page_content = await self.page.content()
+                        import re
+                        # Look for Persian phone numbers (۰۹ pattern)
+                        persian_pattern = r'[۰۹]{2}[۰-۹]{9}'
+                        english_pattern = r'0?9[0-9]{9}'
+                        
+                        matches = re.findall(persian_pattern, page_content)
+                        if matches:
+                            phone = self._parse_persian_number(matches[0])
+                            if phone:
+                                logger.info(f"Extracted phone from regex (Persian): {phone}")
+                                return f"0{phone}" if not str(phone).startswith('0') else str(phone)
+                        
+                        matches = re.findall(english_pattern, page_content)
+                        if matches:
+                            phone = matches[0]
+                            if not phone.startswith('0'):
+                                phone = '0' + phone
+                            logger.info(f"Extracted phone from regex (English): {phone}")
+                            return phone
+                    except Exception as regex_err:
+                        logger.warning(f"Regex extraction failed: {regex_err}")
+                
+                if not phone_found:
+                    logger.warning("No phone element found after clicking contact button")
             else:
-                logger.debug("No contact button found on page")
+                logger.warning("No contact button found on page - phone cannot be extracted")
             
             return None
             
