@@ -7776,3 +7776,1029 @@ DETAIL:  Failing row contains (78, SF-20260107152525-CEF7C6, test, null, مور�
 2026-01-07 19:07:20 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.122s
 2026-01-07 19:07:20 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.120s
 2026-01-07 19:07:30 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 5
+2026-01-07 19:07:34 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=6
+2026-01-07 19:07:41 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.014s
+2026-01-07 19:07:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.294s
+2026-01-07 19:07:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.571s
+2026-01-07 19:07:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.606s
+2026-01-07 19:07:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.295s
+2026-01-07 19:07:51 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:07:51 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:07:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.330s
+2026-01-07 19:08:00 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 6
+2026-01-07 19:08:12 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:08:12 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:08:12 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:08:12 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:08:12 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:08:12 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:08:12 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:08:12 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:08:17 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 429 - 0.241s
+2026-01-07 19:08:19 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.255s
+2026-01-07 19:08:19 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.363s
+2026-01-07 19:08:22 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.002s
+2026-01-07 19:08:22 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.001s
+2026-01-07 19:08:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.174s
+2026-01-07 19:08:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.262s
+2026-01-07 19:08:23 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.006s
+2026-01-07 19:08:23 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.008s
+2026-01-07 19:08:23 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.194s
+2026-01-07 19:08:25 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 429 - 0.116s
+2026-01-07 19:08:32 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.131s
+2026-01-07 19:08:34 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:08:43 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.001s
+2026-01-07 19:08:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.113s
+2026-01-07 19:08:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.192s
+2026-01-07 19:08:43 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.001s
+2026-01-07 19:08:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.183s
+2026-01-07 19:08:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.279s
+2026-01-07 19:08:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.335s
+2026-01-07 19:08:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.411s
+2026-01-07 19:08:44 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.003s
+2026-01-07 19:08:44 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.002s
+2026-01-07 19:08:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.192s
+2026-01-07 19:08:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.216s
+2026-01-07 19:09:04 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:09:25 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 200 - 0.249s
+2026-01-07 19:09:30 | INFO     | app.scraper.auth:apply_cookies:195 - Cookies applied to browser context
+2026-01-07 19:09:32 | INFO     | app.scraper.auth:restore_session:372 - Session restored successfully for 09058432452
+2026-01-07 19:09:32 | INFO     | app.scraper.divar_scraper:initialize:96 - Session restored successfully
+2026-01-07 19:09:32 | INFO     | app.scraper.divar_scraper:start_scraping_job:916 - Starting scraping job for urmia/buy-apartment
+2026-01-07 19:09:32 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment
+2026-01-07 19:09:35 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:09:36 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs/5ca9f0fe-3e83-4352-b6fb-8f78496ba926 - 200 - 0.210s
+2026-01-07 19:09:36 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/jobs/5ca9f0fe-3e83-4352-b6fb-8f78496ba926/cancel - 200 - 0.260s
+2026-01-07 19:09:41 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs/5ca9f0fe-3e83-4352-b6fb-8f78496ba926 - 200 - 0.329s
+2026-01-07 19:09:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.389s
+2026-01-07 19:09:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.684s
+2026-01-07 19:09:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.221s
+2026-01-07 19:09:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.586s
+2026-01-07 19:09:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.198s
+2026-01-07 19:09:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.349s
+2026-01-07 19:09:52 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 9 listings on page 1
+2026-01-07 19:09:55 | INFO     | app.scraper.divar_scraper:start_scraping_job:924 - Job 5ca9f0fe-3e83-4352-b6fb-8f78496ba926 was cancelled, stopping scraping
+2026-01-07 19:09:57 | INFO     | app.scraper.divar_scraper:close:115 - Scraper closed successfully
+2026-01-07 19:10:05 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.014s
+2026-01-07 19:10:11 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 200 - 0.339s
+2026-01-07 19:10:15 | INFO     | app.scraper.auth:apply_cookies:195 - Cookies applied to browser context
+2026-01-07 19:10:17 | INFO     | app.scraper.auth:restore_session:372 - Session restored successfully for 09058432452
+2026-01-07 19:10:17 | INFO     | app.scraper.divar_scraper:initialize:96 - Session restored successfully
+2026-01-07 19:10:17 | INFO     | app.scraper.divar_scraper:start_scraping_job:916 - Starting scraping job for urmia/buy-villa
+2026-01-07 19:10:17 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-villa
+2026-01-07 19:10:33 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs/d90ba36a-9980-47a8-9fc7-43ef1ea43230 - 200 - 1.209s
+2026-01-07 19:10:33 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/jobs/d90ba36a-9980-47a8-9fc7-43ef1ea43230/cancel - 200 - 0.245s
+2026-01-07 19:10:36 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:10:37 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 9 listings on page 1
+2026-01-07 19:10:37 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs/d90ba36a-9980-47a8-9fc7-43ef1ea43230 - 200 - 0.467s
+2026-01-07 19:10:41 | INFO     | app.scraper.divar_scraper:start_scraping_job:924 - Job d90ba36a-9980-47a8-9fc7-43ef1ea43230 was cancelled, stopping scraping
+2026-01-07 19:10:42 | INFO     | app.scraper.divar_scraper:close:115 - Scraper closed successfully
+2026-01-07 19:10:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.425s
+2026-01-07 19:10:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.206s
+2026-01-07 19:10:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.528s
+2026-01-07 19:10:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.376s
+2026-01-07 19:10:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.133s
+2026-01-07 19:10:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.162s
+2026-01-07 19:11:06 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 19:11:36 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:11:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.168s
+2026-01-07 19:11:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.239s
+2026-01-07 19:11:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.242s
+2026-01-07 19:11:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.223s
+2026-01-07 19:12:06 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:12:37 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:12:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.180s
+2026-01-07 19:12:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.201s
+2026-01-07 19:12:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.153s
+2026-01-07 19:12:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.218s
+2026-01-07 19:12:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.129s
+2026-01-07 19:13:07 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:13:37 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:13:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.205s
+2026-01-07 19:13:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.278s
+2026-01-07 19:13:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.119s
+2026-01-07 19:13:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.147s
+2026-01-07 19:13:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.252s
+2026-01-07 19:13:56 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.158s
+2026-01-07 19:13:56 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.168s
+2026-01-07 19:13:57 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.003s
+2026-01-07 19:13:57 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.003s
+2026-01-07 19:13:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.197s
+2026-01-07 19:13:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.224s
+2026-01-07 19:13:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.286s
+2026-01-07 19:14:07 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:14:20 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.057s
+2026-01-07 19:14:20 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.060s
+2026-01-07 19:14:20 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.289s
+2026-01-07 19:14:20 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.313s
+2026-01-07 19:14:20 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.336s
+2026-01-07 19:14:37 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:14:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.125s
+2026-01-07 19:14:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.159s
+2026-01-07 19:14:56 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.214s
+2026-01-07 19:14:56 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.170s
+2026-01-07 19:14:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.110s
+2026-01-07 19:14:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.194s
+2026-01-07 19:15:07 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:15:08 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.153s
+2026-01-07 19:15:11 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.121s
+2026-01-07 19:15:20 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.142s
+2026-01-07 19:15:20 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.194s
+2026-01-07 19:15:30 | DEBUG    | app.main:log_requests:106 - GET /api/properties/7 - 200 - 0.095s
+2026-01-07 19:15:37 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:15:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.114s
+2026-01-07 19:15:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.215s
+2026-01-07 19:15:44 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.007s
+2026-01-07 19:15:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.106s
+2026-01-07 19:15:44 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.006s
+2026-01-07 19:15:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.260s
+2026-01-07 19:15:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.150s
+2026-01-07 19:15:49 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.129s
+2026-01-07 19:15:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.153s
+2026-01-07 19:15:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.179s
+2026-01-07 19:16:08 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:16:32 | DEBUG    | app.main:log_requests:106 - GET /api/properties/7 - 200 - 0.143s
+2026-01-07 19:16:35 | DEBUG    | app.main:log_requests:106 - GET /api/properties/7 - 200 - 0.171s
+2026-01-07 19:16:38 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:16:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.200s
+2026-01-07 19:16:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.185s
+2026-01-07 19:16:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.169s
+2026-01-07 19:16:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.192s
+2026-01-07 19:16:48 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.126s
+2026-01-07 19:16:48 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.205s
+2026-01-07 19:16:51 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.216s
+2026-01-07 19:16:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.091s
+2026-01-07 19:16:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.239s
+2026-01-07 19:17:02 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.183s
+2026-01-07 19:17:08 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.005s
+2026-01-07 19:17:38 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:17:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.113s
+2026-01-07 19:17:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.175s
+2026-01-07 19:17:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.142s
+2026-01-07 19:17:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.144s
+2026-01-07 19:17:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.182s
+2026-01-07 19:17:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.235s
+2026-01-07 19:17:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.113s
+2026-01-07 19:17:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.132s
+2026-01-07 19:17:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.154s
+2026-01-07 19:17:59 | DEBUG    | app.main:log_requests:106 - GET /api/auth/cookies - 200 - 0.116s
+2026-01-07 19:17:59 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.156s
+2026-01-07 19:18:08 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:18:16 | DEBUG    | app.main:log_requests:106 - GET /api/auth/cookies - 200 - 0.125s
+2026-01-07 19:18:16 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.166s
+2026-01-07 19:18:36 | DEBUG    | app.main:log_requests:106 - GET /api/proxies - 307 - 0.001s
+2026-01-07 19:18:38 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:18:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.167s
+2026-01-07 19:18:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.208s
+2026-01-07 19:18:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.156s
+2026-01-07 19:18:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.206s
+2026-01-07 19:18:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.098s
+2026-01-07 19:18:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.121s
+2026-01-07 19:18:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.194s
+2026-01-07 19:18:45 | DEBUG    | app.main:log_requests:106 - GET /api/proxies - 307 - 0.001s
+2026-01-07 19:18:52 | DEBUG    | app.main:log_requests:106 - GET /api/docs - 200 - 0.001s
+2026-01-07 19:18:53 | DEBUG    | app.main:log_requests:106 - GET /api/openapi.json - 200 - 0.135s
+2026-01-07 19:18:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.179s
+2026-01-07 19:18:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.200s
+2026-01-07 19:18:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.222s
+2026-01-07 19:19:01 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.123s
+2026-01-07 19:19:08 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:19:39 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:19:40 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.184s
+2026-01-07 19:19:40 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.258s
+2026-01-07 19:19:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.166s
+2026-01-07 19:19:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.207s
+2026-01-07 19:19:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.130s
+2026-01-07 19:19:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.233s
+2026-01-07 19:19:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.230s
+2026-01-07 19:19:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.156s
+2026-01-07 19:19:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.189s
+2026-01-07 19:19:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.252s
+2026-01-07 19:20:09 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:20:39 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:20:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.254s
+2026-01-07 19:20:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.192s
+2026-01-07 19:20:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.163s
+2026-01-07 19:20:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.211s
+2026-01-07 19:20:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.236s
+2026-01-07 19:20:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.255s
+2026-01-07 19:20:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.322s
+2026-01-07 19:20:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.241s
+2026-01-07 19:20:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.297s
+2026-01-07 19:21:09 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.009s
+2026-01-07 19:21:40 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:21:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.162s
+2026-01-07 19:21:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.264s
+2026-01-07 19:21:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.230s
+2026-01-07 19:21:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.268s
+2026-01-07 19:21:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.152s
+2026-01-07 19:21:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.251s
+2026-01-07 19:22:10 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.012s
+2026-01-07 19:22:33 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.232s
+2026-01-07 19:22:35 | DEBUG    | app.main:log_requests:106 - GET /api/auth/cookies - 200 - 0.204s
+2026-01-07 19:22:35 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.224s
+2026-01-07 19:22:35 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.193s
+2026-01-07 19:22:40 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:22:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.244s
+2026-01-07 19:22:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.346s
+2026-01-07 19:22:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.206s
+2026-01-07 19:22:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.264s
+2026-01-07 19:22:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.201s
+2026-01-07 19:22:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.246s
+2026-01-07 19:22:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.220s
+2026-01-07 19:23:10 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:23:34 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.145s
+2026-01-07 19:23:40 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:23:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.124s
+2026-01-07 19:23:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.138s
+2026-01-07 19:23:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.131s
+2026-01-07 19:23:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.135s
+2026-01-07 19:23:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.296s
+2026-01-07 19:23:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.147s
+2026-01-07 19:23:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.274s
+2026-01-07 19:23:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.385s
+2026-01-07 19:24:10 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:24:41 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:24:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.178s
+2026-01-07 19:24:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.188s
+2026-01-07 19:24:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.206s
+2026-01-07 19:24:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.262s
+2026-01-07 19:24:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.188s
+2026-01-07 19:24:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.256s
+2026-01-07 19:25:11 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:25:14 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.122s
+2026-01-07 19:25:18 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.104s
+2026-01-07 19:25:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.166s
+2026-01-07 19:25:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.177s
+2026-01-07 19:25:40 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.151s
+2026-01-07 19:25:41 | DEBUG    | app.main:log_requests:106 - GET /api/auth/cookies - 200 - 0.112s
+2026-01-07 19:25:41 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.118s
+2026-01-07 19:25:41 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:25:41 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.105s
+2026-01-07 19:25:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.166s
+2026-01-07 19:25:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.221s
+2026-01-07 19:25:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.241s
+2026-01-07 19:25:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.288s
+2026-01-07 19:25:47 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.111s
+2026-01-07 19:25:47 | DEBUG    | app.main:log_requests:106 - GET /api/auth/cookies - 200 - 0.117s
+2026-01-07 19:25:47 | DEBUG    | app.main:log_requests:106 - GET /api/proxies - 307 - 0.001s
+2026-01-07 19:25:49 | DEBUG    | app.main:log_requests:106 - GET /api/auth/cookies - 200 - 0.161s
+2026-01-07 19:25:49 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.167s
+2026-01-07 19:25:50 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.115s
+2026-01-07 19:25:51 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.101s
+2026-01-07 19:25:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.175s
+2026-01-07 19:25:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.183s
+2026-01-07 19:26:11 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:26:15 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.145s
+2026-01-07 19:26:15 | DEBUG    | app.main:log_requests:106 - GET /api/auth/cookies - 200 - 0.087s
+2026-01-07 19:26:15 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.118s
+2026-01-07 19:26:16 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.169s
+2026-01-07 19:26:18 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.102s
+2026-01-07 19:26:21 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.142s
+2026-01-07 19:26:21 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.184s
+2026-01-07 19:26:22 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.099s
+2026-01-07 19:26:23 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.081s
+2026-01-07 19:26:24 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.180s
+2026-01-07 19:26:31 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.157s
+2026-01-07 19:26:31 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.198s
+2026-01-07 19:26:41 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:26:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.137s
+2026-01-07 19:26:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.154s
+2026-01-07 19:26:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.153s
+2026-01-07 19:26:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.174s
+2026-01-07 19:26:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.144s
+2026-01-07 19:26:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.199s
+2026-01-07 19:27:11 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:27:41 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:27:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.183s
+2026-01-07 19:27:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.267s
+2026-01-07 19:27:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.100s
+2026-01-07 19:27:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.251s
+2026-01-07 19:27:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.133s
+2026-01-07 19:27:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.200s
+2026-01-07 19:27:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.291s
+2026-01-07 19:28:12 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:28:42 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:28:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.146s
+2026-01-07 19:28:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.245s
+2026-01-07 19:28:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.284s
+2026-01-07 19:28:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.320s
+2026-01-07 19:28:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.376s
+2026-01-07 19:28:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.132s
+2026-01-07 19:28:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.284s
+2026-01-07 19:28:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.309s
+2026-01-07 19:29:12 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:29:42 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:29:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.139s
+2026-01-07 19:29:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.188s
+2026-01-07 19:29:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.248s
+2026-01-07 19:29:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.338s
+2026-01-07 19:29:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.212s
+2026-01-07 19:29:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.288s
+2026-01-07 19:30:12 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.004s
+2026-01-07 19:30:42 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.004s
+2026-01-07 19:30:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.489s
+2026-01-07 19:30:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.385s
+2026-01-07 19:30:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.381s
+2026-01-07 19:30:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.595s
+2026-01-07 19:30:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.119s
+2026-01-07 19:30:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.137s
+2026-01-07 19:31:13 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:31:43 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:31:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.240s
+2026-01-07 19:31:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.288s
+2026-01-07 19:31:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.384s
+2026-01-07 19:31:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.310s
+2026-01-07 19:31:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.342s
+2026-01-07 19:31:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.330s
+2026-01-07 19:31:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.207s
+2026-01-07 19:31:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.260s
+2026-01-07 19:32:13 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:32:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.149s
+2026-01-07 19:32:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.198s
+2026-01-07 19:32:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.176s
+2026-01-07 19:32:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.140s
+2026-01-07 19:32:43 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:32:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.168s
+2026-01-07 19:32:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.202s
+2026-01-07 19:33:13 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.004s
+2026-01-07 19:33:42 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.175s
+2026-01-07 19:33:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.227s
+2026-01-07 19:33:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.303s
+2026-01-07 19:33:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.239s
+2026-01-07 19:33:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.284s
+2026-01-07 19:33:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.117s
+2026-01-07 19:33:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.180s
+2026-01-07 19:33:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.246s
+2026-01-07 19:33:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:33:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.198s
+2026-01-07 19:33:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.154s
+2026-01-07 19:33:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.256s
+2026-01-07 19:33:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.113s
+2026-01-07 19:34:14 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:34:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.128s
+2026-01-07 19:34:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.168s
+2026-01-07 19:34:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.221s
+2026-01-07 19:34:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.307s
+2026-01-07 19:34:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.149s
+2026-01-07 19:34:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.150s
+2026-01-07 19:34:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:34:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.220s
+2026-01-07 19:34:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.225s
+2026-01-07 19:35:14 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:35:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.141s
+2026-01-07 19:35:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.241s
+2026-01-07 19:35:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.314s
+2026-01-07 19:35:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.327s
+2026-01-07 19:35:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.102s
+2026-01-07 19:35:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.127s
+2026-01-07 19:35:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.149s
+2026-01-07 19:35:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.114s
+2026-01-07 19:35:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:36:06 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.001s
+2026-01-07 19:36:06 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.001s
+2026-01-07 19:36:06 | DEBUG    | app.main:log_requests:106 - GET /dashboard/ - 304 - 0.045s
+2026-01-07 19:36:06 | DEBUG    | app.main:log_requests:106 - GET /dashboard/js/app.js - 304 - 0.014s
+2026-01-07 19:36:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.351s
+2026-01-07 19:36:07 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.001s
+2026-01-07 19:36:07 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.007s
+2026-01-07 19:36:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.152s
+2026-01-07 19:36:08 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.155s
+2026-01-07 19:36:14 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:36:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.203s
+2026-01-07 19:36:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.219s
+2026-01-07 19:36:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.333s
+2026-01-07 19:36:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.394s
+2026-01-07 19:36:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.110s
+2026-01-07 19:36:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.201s
+2026-01-07 19:36:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:37:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.171s
+2026-01-07 19:37:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.220s
+2026-01-07 19:37:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:37:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.225s
+2026-01-07 19:37:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.259s
+2026-01-07 19:37:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.269s
+2026-01-07 19:37:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.312s
+2026-01-07 19:37:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.114s
+2026-01-07 19:37:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.150s
+2026-01-07 19:37:45 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:38:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.146s
+2026-01-07 19:38:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.171s
+2026-01-07 19:38:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:38:42 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.133s
+2026-01-07 19:38:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.256s
+2026-01-07 19:38:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.315s
+2026-01-07 19:38:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.388s
+2026-01-07 19:38:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.451s
+2026-01-07 19:38:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.114s
+2026-01-07 19:38:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.244s
+2026-01-07 19:38:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.291s
+2026-01-07 19:38:45 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:38:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.093s
+2026-01-07 19:39:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.140s
+2026-01-07 19:39:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.177s
+2026-01-07 19:39:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:39:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.144s
+2026-01-07 19:39:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.147s
+2026-01-07 19:39:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.261s
+2026-01-07 19:39:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.252s
+2026-01-07 19:39:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.173s
+2026-01-07 19:39:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.186s
+2026-01-07 19:39:45 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:40:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.336s
+2026-01-07 19:40:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.311s
+2026-01-07 19:40:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:40:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.173s
+2026-01-07 19:40:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.289s
+2026-01-07 19:40:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.407s
+2026-01-07 19:40:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.422s
+2026-01-07 19:40:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.139s
+2026-01-07 19:40:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.221s
+2026-01-07 19:40:46 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.010s
+2026-01-07 19:41:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.130s
+2026-01-07 19:41:07 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.201s
+2026-01-07 19:41:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.244s
+2026-01-07 19:41:16 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:41:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.362s
+2026-01-07 19:41:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.404s
+2026-01-07 19:41:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.413s
+2026-01-07 19:41:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.452s
+2026-01-07 19:41:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.270s
+2026-01-07 19:41:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.327s
+2026-01-07 19:41:46 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:42:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.190s
+2026-01-07 19:42:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.281s
+2026-01-07 19:42:16 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:42:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.174s
+2026-01-07 19:42:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.184s
+2026-01-07 19:42:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.269s
+2026-01-07 19:42:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.275s
+2026-01-07 19:42:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.189s
+2026-01-07 19:42:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.110s
+2026-01-07 19:42:46 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:43:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.139s
+2026-01-07 19:43:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.178s
+2026-01-07 19:43:16 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:43:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.203s
+2026-01-07 19:43:42 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.196s
+2026-01-07 19:43:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.210s
+2026-01-07 19:43:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.335s
+2026-01-07 19:43:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.382s
+2026-01-07 19:43:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.152s
+2026-01-07 19:43:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.153s
+2026-01-07 19:43:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.252s
+2026-01-07 19:43:47 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:43:57 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.088s
+2026-01-07 19:44:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.173s
+2026-01-07 19:44:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.160s
+2026-01-07 19:44:17 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:44:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.178s
+2026-01-07 19:44:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.216s
+2026-01-07 19:44:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.268s
+2026-01-07 19:44:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.358s
+2026-01-07 19:44:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.130s
+2026-01-07 19:44:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.254s
+2026-01-07 19:44:47 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:45:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.247s
+2026-01-07 19:45:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.330s
+2026-01-07 19:45:12 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:45:12 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:45:13 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:45:13 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:45:14 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:45:14 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:45:14 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:45:14 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:45:25 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:45:25 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:45:25 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:45:25 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:45:25 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:45:25 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:45:25 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:45:25 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:45:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.264s
+2026-01-07 19:45:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.436s
+2026-01-07 19:45:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.426s
+2026-01-07 19:45:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.509s
+2026-01-07 19:45:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.145s
+2026-01-07 19:45:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.159s
+2026-01-07 19:45:47 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:46:07 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.180s
+2026-01-07 19:46:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.197s
+2026-01-07 19:46:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.193s
+2026-01-07 19:46:17 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:46:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.149s
+2026-01-07 19:46:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.196s
+2026-01-07 19:46:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.237s
+2026-01-07 19:46:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.246s
+2026-01-07 19:46:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.142s
+2026-01-07 19:46:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.206s
+2026-01-07 19:46:47 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:47:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.240s
+2026-01-07 19:47:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.259s
+2026-01-07 19:47:18 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:47:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.272s
+2026-01-07 19:47:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.315s
+2026-01-07 19:47:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.397s
+2026-01-07 19:47:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.400s
+2026-01-07 19:47:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.342s
+2026-01-07 19:47:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.375s
+2026-01-07 19:47:48 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:48:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.214s
+2026-01-07 19:48:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.301s
+2026-01-07 19:48:18 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:48:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.350s
+2026-01-07 19:48:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.422s
+2026-01-07 19:48:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.448s
+2026-01-07 19:48:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.487s
+2026-01-07 19:48:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.327s
+2026-01-07 19:48:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.241s
+2026-01-07 19:48:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.307s
+2026-01-07 19:48:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.416s
+2026-01-07 19:48:44 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:48:44 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:48:45 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:48:45 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:48:46 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:48:46 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:48:46 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 19:48:46 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 19:48:57 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:48:57 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:48:57 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:48:57 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 19:48:57 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:48:57 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:48:57 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:48:58 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 19:49:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.422s
+2026-01-07 19:49:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.462s
+2026-01-07 19:49:20 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.005s
+2026-01-07 19:49:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.416s
+2026-01-07 19:49:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.425s
+2026-01-07 19:49:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.493s
+2026-01-07 19:49:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.516s
+2026-01-07 19:49:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.643s
+2026-01-07 19:49:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.232s
+2026-01-07 19:49:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.257s
+2026-01-07 19:49:50 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:50:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.193s
+2026-01-07 19:50:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.220s
+2026-01-07 19:50:20 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.005s
+2026-01-07 19:50:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.283s
+2026-01-07 19:50:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.321s
+2026-01-07 19:50:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.373s
+2026-01-07 19:50:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.373s
+2026-01-07 19:50:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.219s
+2026-01-07 19:50:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.366s
+2026-01-07 19:50:51 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:51:07 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.192s
+2026-01-07 19:51:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.256s
+2026-01-07 19:51:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.275s
+2026-01-07 19:51:21 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:51:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.210s
+2026-01-07 19:51:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.353s
+2026-01-07 19:51:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.355s
+2026-01-07 19:51:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.402s
+2026-01-07 19:51:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.210s
+2026-01-07 19:51:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.187s
+2026-01-07 19:51:51 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:52:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.153s
+2026-01-07 19:52:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.207s
+2026-01-07 19:52:21 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:52:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.224s
+2026-01-07 19:52:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.276s
+2026-01-07 19:52:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.207s
+2026-01-07 19:52:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.319s
+2026-01-07 19:52:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.142s
+2026-01-07 19:52:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.208s
+2026-01-07 19:52:51 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:53:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.154s
+2026-01-07 19:53:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.199s
+2026-01-07 19:53:21 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:53:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.135s
+2026-01-07 19:53:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.178s
+2026-01-07 19:53:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.362s
+2026-01-07 19:53:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.388s
+2026-01-07 19:53:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.459s
+2026-01-07 19:53:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.120s
+2026-01-07 19:53:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.139s
+2026-01-07 19:53:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.145s
+2026-01-07 19:53:50 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.157s
+2026-01-07 19:53:52 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:54:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.170s
+2026-01-07 19:54:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.233s
+2026-01-07 19:54:22 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:54:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.283s
+2026-01-07 19:54:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.318s
+2026-01-07 19:54:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.326s
+2026-01-07 19:54:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.350s
+2026-01-07 19:54:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.379s
+2026-01-07 19:54:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.118s
+2026-01-07 19:54:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.147s
+2026-01-07 19:54:50 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 422 - 0.008s
+2026-01-07 19:54:52 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:54:58 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 200 - 0.239s
+2026-01-07 19:55:01 | INFO     | app.scraper.auth:apply_cookies:195 - Cookies applied to browser context
+2026-01-07 19:55:03 | INFO     | app.scraper.auth:restore_session:372 - Session restored successfully for 09058432452
+2026-01-07 19:55:03 | INFO     | app.scraper.divar_scraper:initialize:96 - Session restored successfully
+2026-01-07 19:55:03 | INFO     | app.scraper.divar_scraper:start_scraping_job:1005 - Starting scraping job for tehran/buy-apartment
+2026-01-07 19:55:03 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/tehran/buy-apartment
+2026-01-07 19:55:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.220s
+2026-01-07 19:55:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.473s
+2026-01-07 19:55:12 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/474b2271-0a23-43ef-a2ce-fe60c4d1d2d9 - 404 - 0.005s
+2026-01-07 19:55:15 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/474b2271-0a23-43ef-a2ce-fe60c4d1d2d9 - 404 - 0.002s
+2026-01-07 19:55:20 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/474b2271-0a23-43ef-a2ce-fe60c4d1d2d9 - 404 - 0.002s
+2026-01-07 19:55:23 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.025s
+2026-01-07 19:55:24 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/474b2271-0a23-43ef-a2ce-fe60c4d1d2d9 - 404 - 0.002s
+2026-01-07 19:55:25 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.553s
+2026-01-07 19:55:31 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.541s
+2026-01-07 19:55:35 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 9 listings on page 1
+2026-01-07 19:55:37 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.080s
+2026-01-07 19:55:39 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/tehran/buy-apartment?page=2
+2026-01-07 19:55:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.243s
+2026-01-07 19:55:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.158s
+2026-01-07 19:55:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.246s
+2026-01-07 19:55:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.068s
+2026-01-07 19:55:47 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/474b2271-0a23-43ef-a2ce-fe60c4d1d2d9 - 404 - 0.001s
+2026-01-07 19:55:53 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.004s
+2026-01-07 19:56:01 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 2
+2026-01-07 19:56:03 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/474b2271-0a23-43ef-a2ce-fe60c4d1d2d9 - 404 - 0.002s
+2026-01-07 19:56:05 | INFO     | app.scraper.divar_scraper:start_scraping_job:1029 - Found 60 total listings
+2026-01-07 19:56:05 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%DB%B9%DB%B8%D9%85%D8%AA%D8%B1-%D9%86%D9%88%D8%B1-%D9%88-%D9%86%D9%82%D8%B4%D9%87-%D8%A8%DB%8C%D9%86%D8%B8%DB%8C%D8%B1-%DA%A9%D9%85-%D9%88%D8%A7%D8%AD%D8%AF-%D9%88%D9%81%D8%A7%D8%A2%D8%B0%D8%B1/Qael73LS
+2026-01-07 19:56:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.959s
+2026-01-07 19:56:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.969s
+2026-01-07 19:56:08 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.792s
+2026-01-07 19:56:09 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/474b2271-0a23-43ef-a2ce-fe60c4d1d2d9 - 404 - 0.001s
+2026-01-07 19:56:17 | INFO     | app.scraper.divar_scraper:_click_show_all_details:669 - No 'Show all details' button found (content may already be expanded)
+2026-01-07 19:56:17 | INFO     | app.scraper.divar_scraper:_get_phone_number:698 - Found visible contact button with selector: .post-actions__get-contact
+2026-01-07 19:56:19 | INFO     | app.scraper.divar_scraper:_get_phone_number:715 - Contact button clicked successfully with force
+2026-01-07 19:56:23 | INFO     | app.scraper.divar_scraper:_get_phone_number:743 - Debug screenshot saved to /app/data/images/debug_after_click.png
+2026-01-07 19:56:23 | INFO     | app.scraper.divar_scraper:_get_phone_number:753 - No tel: link found in page content after click
+2026-01-07 19:56:23 | INFO     | app.scraper.divar_scraper:_get_phone_number:756 - Modal detected on page
+2026-01-07 19:56:23 | INFO     | app.scraper.divar_scraper:_get_phone_number:761 - Found phone-like patterns: ['6666666667', '6666666667', '3333333333', '10929151095', '10929151095']
+2026-01-07 19:56:24 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:56:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.396s
+2026-01-07 19:56:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.420s
+2026-01-07 19:56:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.175s
+2026-01-07 19:56:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.418s
+2026-01-07 19:56:49 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.002s
+2026-01-07 19:56:49 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.002s
+2026-01-07 19:56:50 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.009s
+2026-01-07 19:56:50 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.005s
+2026-01-07 19:56:50 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.810s
+2026-01-07 19:56:50 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.366s
+2026-01-07 19:56:51 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.552s
+2026-01-07 19:56:52 | INFO     | app.scraper.divar_scraper:_get_phone_number:840 - Extracted phone from regex (English): 09992968750
+2026-01-07 19:56:53 | DEBUG    | app.scraper.divar_scraper:download_images:882 - Downloaded image: img_1.webp
+2026-01-07 19:56:53 | DEBUG    | app.scraper.divar_scraper:download_images:882 - Downloaded image: img_2.webp
+2026-01-07 19:56:54 | DEBUG    | app.scraper.divar_scraper:download_images:882 - Downloaded image: img_3.webp
+2026-01-07 19:56:55 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:56:56 | DEBUG    | app.scraper.divar_scraper:download_images:882 - Downloaded image: img_9.jpg
+2026-01-07 19:56:57 | INFO     | app.scraper.divar_scraper:save_property:949 - Saved new property: Qael73LS with tag SF-20260107195657-1E275D
+2026-01-07 19:57:00 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%88%D8%A7%D8%AD%D8%AF-%D8%AE%D9%88%D8%B4-%D9%86%D9%82%D8%B4%D9%87-93-%D9%85%D8%AA%D8%B1%DB%8C-%D9%85%D8%AD%D9%84%D9%87-%D9%85%DB%8C%D8%AF%D8%A7%D9%86-%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86/QaJ55Ukl
+2026-01-07 19:57:11 | INFO     | app.scraper.divar_scraper:_click_show_all_details:669 - No 'Show all details' button found (content may already be expanded)
+2026-01-07 19:57:12 | INFO     | app.scraper.divar_scraper:_get_phone_number:698 - Found visible contact button with selector: .post-actions__get-contact
+2026-01-07 19:57:15 | INFO     | app.scraper.divar_scraper:_get_phone_number:715 - Contact button clicked successfully with force
+2026-01-07 19:57:21 | INFO     | app.scraper.divar_scraper:_get_phone_number:743 - Debug screenshot saved to /app/data/images/debug_after_click.png
+2026-01-07 19:57:22 | INFO     | app.scraper.divar_scraper:_get_phone_number:753 - No tel: link found in page content after click
+2026-01-07 19:57:22 | INFO     | app.scraper.divar_scraper:_get_phone_number:756 - Modal detected on page
+2026-01-07 19:57:22 | INFO     | app.scraper.divar_scraper:_get_phone_number:761 - Found phone-like patterns: ['6666666667', '6666666667', '3333333333', '10929151095', '10929151095']
+2026-01-07 19:57:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 19:57:33 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 200 - 0.980s
+2026-01-07 19:57:43 | INFO     | app.scraper.auth:apply_cookies:195 - Cookies applied to browser context
+2026-01-07 19:57:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.936s
+2026-01-07 19:57:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.953s
+2026-01-07 19:57:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.341s
+2026-01-07 19:57:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.502s
+2026-01-07 19:57:49 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 200 - 2.779s
+2026-01-07 19:57:53 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 2.185s
+2026-01-07 19:57:53 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 2.184s
+2026-01-07 19:57:53 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.055s
+2026-01-07 19:57:53 | INFO     | app.scraper.divar_scraper:_get_phone_number:840 - Extracted phone from regex (English): 09992968750
+2026-01-07 19:57:54 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.001s
+2026-01-07 19:57:55 | DEBUG    | app.main:log_requests:106 - GET /dashboard/ - 304 - 0.687s
+2026-01-07 19:57:55 | DEBUG    | app.main:log_requests:106 - GET /dashboard/js/app.js - 304 - 0.074s
+2026-01-07 19:57:55 | DEBUG    | app.scraper.divar_scraper:download_images:882 - Downloaded image: img_1.webp
+2026-01-07 19:57:56 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.074s
+2026-01-07 19:57:56 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.053s
+2026-01-07 19:57:56 | DEBUG    | app.scraper.divar_scraper:download_images:882 - Downloaded image: img_2.webp
+2026-01-07 19:57:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 2.142s
+2026-01-07 19:57:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 2.187s
+2026-01-07 19:57:58 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 1.737s
+2026-01-07 19:57:59 | WARNING  | app.scraper.auth:restore_session:365 - Navigation slow but continuing: Timeout 15000ms exceeded.
+2026-01-07 19:57:59 | INFO     | app.scraper.auth:restore_session:372 - Session restored successfully for 09058432452
+2026-01-07 19:57:59 | INFO     | app.scraper.divar_scraper:initialize:96 - Session restored successfully
+2026-01-07 19:58:00 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 19:58:00 | INFO     | app.scraper.divar_scraper:save_property:949 - Saved new property: QaJ55Ukl with tag SF-20260107195800-76C9F3
+2026-01-07 19:58:01 | INFO     | app.scraper.divar_scraper:start_scraping_job:1005 - Starting scraping job for urmia/buy-residential
+2026-01-07 19:58:01 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-residential
+2026-01-07 19:58:04 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%DB%B5%DB%B8%D9%85%D8%AA%D8%B1%D8%B3%D9%86%D8%AF%D8%AA%DA%A9%D8%A8%D8%B1%DA%AF-%D9%BE%D8%A7%D8%B1%DA%A9%DB%8C%D9%86%DA%AF-%D8%AF%DB%8C%D8%B2%D8%A7%DB%8C%D9%86-%D8%AE%D8%A7%D8%B5-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%D9%86%D9%82%D8%B4%D9%87-%D9%85%D9%86%D8%B7%D9%82%D9%87/Qadlysi6
+2026-01-07 19:58:12 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.068s
+2026-01-07 19:58:12 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.198s
+2026-01-07 19:58:12 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 2.510s
+2026-01-07 19:58:12 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.056s
+2026-01-07 19:58:13 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.057s
+2026-01-07 19:58:13 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.053s
+2026-01-07 19:58:15 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.446s
+2026-01-07 19:58:15 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 1.458s
+2026-01-07 19:58:16 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 3.048s
+2026-01-07 19:58:21 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 1.520s
+2026-01-07 19:58:22 | INFO     | app.scraper.auth:apply_cookies:195 - Cookies applied to browser context
+2026-01-07 19:58:22 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.026s
+2026-01-07 19:58:28 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.052s
+2026-01-07 19:58:30 | INFO     | app.scraper.auth:restore_session:372 - Session restored successfully for 09058432452
+2026-01-07 19:58:30 | INFO     | app.scraper.divar_scraper:initialize:96 - Session restored successfully
+2026-01-07 19:58:32 | INFO     | app.scraper.divar_scraper:start_scraping_job:1005 - Starting scraping job for urmia/buy-residential
+2026-01-07 19:58:33 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-residential
+2026-01-07 19:58:35 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.041s
+2026-01-07 19:58:37 | DEBUG    | app.main:log_requests:106 - GET /api/properties/9 - 200 - 9.335s
+2026-01-07 19:58:39 | DEBUG    | app.main:log_requests:106 - GET /api/properties/8 - 200 - 3.507s
+2026-01-07 19:58:39 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.141s
+2026-01-07 19:58:40 | DEBUG    | app.main:log_requests:106 - GET /api/properties/9 - 200 - 1.737s
+2026-01-07 19:58:40 | DEBUG    | app.main:log_requests:106 - GET /api/properties/8 - 200 - 0.912s
+2026-01-07 19:58:41 | DEBUG    | app.main:log_requests:106 - GET /api/properties/9 - 200 - 0.590s
+2026-01-07 19:58:42 | DEBUG    | app.main:log_requests:106 - GET /api/properties/9 - 200 - 0.910s
+2026-01-07 19:58:42 | DEBUG    | app.main:log_requests:106 - GET /api/properties/6 - 200 - 4.057s
+2026-01-07 19:58:45 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 2.243s
+2026-01-07 19:58:45 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 1.454s
+2026-01-07 19:58:45 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 2.250s
+2026-01-07 19:58:45 | DEBUG    | app.main:log_requests:106 - GET /api/properties/9 - 200 - 2.607s
+2026-01-07 19:58:45 | DEBUG    | app.main:log_requests:106 - GET /api/properties/6 - 200 - 2.229s
+2026-01-07 19:58:45 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.934s
+2026-01-07 19:58:46 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 2.998s
+2026-01-07 19:58:47 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.088s
+2026-01-07 19:58:55 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.040s
+2026-01-07 19:58:55 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.014s
+2026-01-07 19:58:55 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.002s
+2026-01-07 19:58:57 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.096s
+2026-01-07 19:58:57 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.193s
+2026-01-07 19:58:58 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.084s
+2026-01-07 19:58:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 2.375s
+2026-01-07 19:58:59 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 2.373s
+2026-01-07 19:58:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 3.635s
+2026-01-07 19:59:06 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.008s
+2026-01-07 19:59:11 | INFO     | app.scraper.divar_scraper:_click_show_all_details:669 - No 'Show all details' button found (content may already be expanded)
+2026-01-07 19:59:12 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.104s
+2026-01-07 19:59:13 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.069s
+2026-01-07 19:59:16 | INFO     | app.scraper.divar_scraper:_get_phone_number:698 - Found visible contact button with selector: .post-actions__get-contact
+2026-01-07 19:59:20 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.013s
+2026-01-07 19:59:22 | INFO     | app.scraper.divar_scraper:_get_phone_number:715 - Contact button clicked successfully with force
+2026-01-07 19:59:26 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.001s
+2026-01-07 19:59:30 | INFO     | app.scraper.divar_scraper:_get_phone_number:743 - Debug screenshot saved to /app/data/images/debug_after_click.png
+2026-01-07 19:59:30 | WARNING  | app.scraper.divar_scraper:scrape_listing_page:245 - Primary selector not found, waiting more...
+2026-01-07 19:59:32 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.019s
+2026-01-07 19:59:32 | INFO     | app.scraper.divar_scraper:_get_phone_number:753 - No tel: link found in page content after click
+2026-01-07 19:59:32 | INFO     | app.scraper.divar_scraper:_get_phone_number:756 - Modal detected on page
+2026-01-07 19:59:32 | INFO     | app.scraper.divar_scraper:_get_phone_number:761 - Found phone-like patterns: ['6666666667', '6666666667', '3333333333', '10929151095', '10929151095']
+2026-01-07 19:59:38 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.010s
+2026-01-07 19:59:45 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 2.304s
+2026-01-07 19:59:45 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 2.301s
+2026-01-07 19:59:45 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 2.304s
+2026-01-07 19:59:45 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.071s
+2026-01-07 19:59:47 | WARNING  | app.scraper.divar_scraper:scrape_listing_page:245 - Primary selector not found, waiting more...
+2026-01-07 19:59:47 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 4.135s
+2026-01-07 19:59:47 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 4.242s
+2026-01-07 19:59:49 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.017s
+2026-01-07 19:59:58 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.367s
+2026-01-07 20:03:09 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 9 listings on page 1
+2026-01-07 20:03:14 | ERROR    | app.main:internal_error_handler:157 - Internal error: 
+2026-01-07 20:03:39 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-residential?page=2
+2026-01-07 20:04:44 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.277s
+2026-01-07 20:04:45 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 100.613s
+2026-01-07 20:04:48 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 288.041s
+2026-01-07 20:04:49 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 228.571s
+2026-01-07 20:04:51 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 100.883s
+2026-01-07 20:04:51 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 7.708s
+2026-01-07 20:04:57 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 22.154s
+2026-01-07 20:05:01 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 36.611s
+2026-01-07 20:05:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 13.833s
+2026-01-07 20:05:14 | ERROR    | app.scraper.divar_scraper:scrape_listing_page:273 - Failed to scrape listing page: Timeout 30000ms exceeded.
+2026-01-07 20:05:14 | INFO     | app.scraper.divar_scraper:start_scraping_job:1019 - No more listings found at page 2
+2026-01-07 20:05:14 | INFO     | app.scraper.divar_scraper:start_scraping_job:1029 - Found 9 total listings
+2026-01-07 20:05:15 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%DA%A9%D9%84%DB%8C%D8%AF-%D9%86%D8%AE%D9%88%D8%B1%D8%AF%D9%87-%D8%AE-%D8%A7%D9%85%DB%8C%D9%86-%D8%A8%D8%B1-%D8%A7%D9%84%D9%81%D8%AA-%D8%AF%D9%88%D9%BE%D8%A7%D8%B1%DA%A9%DB%8C%D9%86%DA%AF/Qaelr7xY
+2026-01-07 20:05:16 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 126.887s
+2026-01-07 20:05:16 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 259.450s
+2026-01-07 20:05:16 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 12.258s
+2026-01-07 20:05:16 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 133.820s
+2026-01-07 20:05:18 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.069s
+2026-01-07 20:05:18 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.040s
+2026-01-07 20:05:18 | INFO     | app.scraper.divar_scraper:_get_phone_number:840 - Extracted phone from regex (English): 09172134399
+2026-01-07 20:05:21 | DEBUG    | app.scraper.divar_scraper:download_images:882 - Downloaded image: img_1.webp
+2026-01-07 20:05:22 | DEBUG    | app.scraper.divar_scraper:download_images:882 - Downloaded image: img_2.webp
+2026-01-07 20:05:23 | DEBUG    | app.scraper.divar_scraper:download_images:882 - Downloaded image: img_3.webp
+2026-01-07 20:05:28 | DEBUG    | app.scraper.divar_scraper:download_images:882 - Downloaded image: img_10.jpg
+2026-01-07 20:05:29 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.030s
+2026-01-07 20:05:31 | INFO     | app.scraper.divar_scraper:save_property:949 - Saved new property: Qadlysi6 with tag SF-20260107200530-195474
+2026-01-07 20:05:38 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%DB%B1%DB%B1%DB%B3%D9%85%D8%AA%D8%B1-%D8%AF%D9%88-%D8%AE%D9%88%D8%A7%D8%A8-%D8%A7%D8%B9%DB%8C%D8%A7%D9%86-%D9%86%D8%B4%DB%8C%D9%86-%D8%AA%DA%A9%D9%88%D8%A7%D8%AD%D8%AF%DB%8C-%D8%AF%D9%87%DA%A9%D8%AF%D9%87-%D8%A7%D9%84%D9%85%D9%BE%DB%8C%DA%A9/Qaex3yyG
+2026-01-07 20:05:38 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.029s
+2026-01-07 20:05:39 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.006s
+2026-01-07 20:05:42 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 9 listings on page 1
+2026-01-07 20:05:42 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.016s
+2026-01-07 20:05:51 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-residential?page=2
+2026-01-07 20:05:58 | ERROR    | app.scraper.divar_scraper:scrape_property_detail:374 - Failed to scrape property detail: Timeout 30000ms exceeded.
+2026-01-07 20:06:06 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 27.070s
+2026-01-07 20:06:06 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 22.974s
+2026-01-07 20:06:06 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 22.954s
+2026-01-07 20:06:07 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 28.361s
+2026-01-07 20:06:07 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D8%B2%D9%85%DB%8C%D9%86-%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86-%D8%B4%D9%88%D8%B1%D8%A7/Qaeh7kxj
+2026-01-07 20:06:08 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 29.629s
+2026-01-07 20:06:10 | ERROR    | app.scraper.divar_scraper:scrape_property_detail:374 - Failed to scrape property detail: Timeout 30000ms exceeded.
+2026-01-07 20:06:15 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%DB%B1%DB%B1%DB%B9%D9%85%D8%AA%D8%B1-%D8%B4%DB%8C%DA%A9-%D9%88-%D9%85%D8%AC%D9%84%D9%84-%D8%AA%DA%A9%D9%88%D8%A7%D8%AD%D8%AF%DB%8C-%D8%AC%D9%88%D8%A7%D9%86%D9%85%D8%B1%D8%AF%D8%A7%D9%86-%D8%AF%D9%87%DA%A9%D8%AF%D9%87-%D8%A7%D9%84%D9%85%D9%BE%DB%8C%DA%A9/QaetXjUd
+2026-01-07 20:06:19 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.058s
+2026-01-07 20:06:20 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 36.646s
+2026-01-07 20:06:20 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 36.645s
+2026-01-07 20:06:22 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.042s
+2026-01-07 20:06:40 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.050s
+2026-01-07 20:06:40 | ERROR    | app.scraper.divar_scraper:scrape_listing_page:273 - Failed to scrape listing page: Timeout 30000ms exceeded.
+2026-01-07 20:06:40 | INFO     | app.scraper.divar_scraper:start_scraping_job:1019 - No more listings found at page 2
+2026-01-07 20:06:40 | INFO     | app.scraper.divar_scraper:start_scraping_job:1029 - Found 9 total listings
+2026-01-07 20:06:41 | ERROR    | app.scraper.divar_scraper:scrape_property_detail:374 - Failed to scrape property detail: Timeout 30000ms exceeded.
+2026-01-07 20:06:42 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%DA%A9%D9%84%DB%8C%D8%AF-%D9%86%D8%AE%D9%88%D8%B1%D8%AF%D9%87-%D8%AE-%D8%A7%D9%85%DB%8C%D9%86-%D8%A8%D8%B1-%D8%A7%D9%84%D9%81%D8%AA-%D8%AF%D9%88%D9%BE%D8%A7%D8%B1%DA%A9%DB%8C%D9%86%DA%AF/Qaelr7xY
+2026-01-07 20:06:45 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D8%A2%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86-%D8%AA%DA%A9-%D9%88%D8%A7%D8%AD%D8%AF%DB%8C-%D8%B4%D8%A7%D9%87%D8%A7%D9%86%D9%87-%D9%88%D9%84%D9%88%DA%A9%D8%B3-%D8%B7%D9%88%D8%A8%DB%8C-%D8%B3%D9%86%D8%AF-%D8%A2%D9%85%D8%A7%D8%AF%D9%87/QaONE-ze
+2026-01-07 20:06:46 | ERROR    | app.scraper.divar_scraper:scrape_property_detail:374 - Failed to scrape property detail: Timeout 30000ms exceeded.
+2026-01-07 20:06:47 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 4.705s
+2026-01-07 20:06:49 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 6.273s
+2026-01-07 20:06:51 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%DB%B2-%D8%AE%D9%88%D8%A7%D8%A8-%D8%A8%D8%A7-%D8%AD%DB%8C%D8%A7%D8%B7-%D9%88-%D8%AA%D8%B1%D8%A7%D8%B3-%D9%88-%D8%A7%D9%86%D8%A8%D8%A7%D8%B1%DB%8C/Qael7iHB
+2026-01-07 20:06:53 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 10.784s
+2026-01-07 20:07:10 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 0.114s
+2026-01-07 20:07:17 | ERROR    | app.scraper.divar_scraper:scrape_property_detail:374 - Failed to scrape property detail: Timeout 30000ms exceeded.
+2026-01-07 20:07:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 34.194s
+2026-01-07 20:07:19 | ERROR    | app.scraper.divar_scraper:scrape_property_detail:374 - Failed to scrape property detail: Timeout 30000ms exceeded.
+2026-01-07 20:07:34 | ERROR    | app.scraper.divar_scraper:scrape_property_detail:374 - Failed to scrape property detail: Timeout 30000ms exceeded.
+2026-01-07 20:07:40 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D8%B2%D9%85%DB%8C%D9%86-%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86-%D8%B4%D9%88%D8%B1%D8%A7/Qaeh7kxj
+2026-01-07 20:08:13 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D8%B2%D9%85%DB%8C%D9%86-%D9%81%D8%A7%D8%B2-%DB%8C%DA%A9-%D8%AF%D8%A7%D8%AF%DA%AF%D8%B3%D8%AA%D8%B1%DB%8C-%D9%85%D8%B9%D8%A7%D9%88%D8%B6%D9%87/QasM5KRF
+2026-01-07 20:10:30 | ERROR    | app.main:internal_error_handler:157 - Internal error: 
+2026-01-07 20:11:08 | ERROR    | app.scraper.auth:load_cookies_from_db:170 - Failed to load cookies from database: 
+2026-01-07 20:12:48 | ERROR    | app.main:internal_error_handler:157 - Internal error: 
+2026-01-07 20:13:00 | ERROR    | app.scraper.auth:load_cookies_from_db:170 - Failed to load cookies from database: 
+2026-01-07 20:13:46 | ERROR    | app.scraper.divar_scraper:scrape_property_detail:374 - Failed to scrape property detail: Timeout 30000ms exceeded.
+2026-01-07 20:14:36 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 334.276s
+2026-01-07 20:14:50 | ERROR    | app.main:internal_error_handler:157 - Internal error: [Errno -3] Temporary failure in name resolution
+2026-01-07 20:14:53 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/status/e0915d88-efb7-490f-a62a-58baf63171e7 - 404 - 195.347s
+2026-01-07 20:15:00 | ERROR    | app.scraper.divar_scraper:scrape_property_detail:374 - Failed to scrape property detail: Timeout 30000ms exceeded.
+2026-01-07 20:16:33 | ERROR    | app.main:internal_error_handler:157 - Internal error: 
+2026-01-07 20:18:09 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%DB%B1%DB%B0%DB%B7%D9%85%D8%AA%D8%B1%D8%B4%D9%87%D8%B1%DA%A9-%D8%B1%D8%A7%D9%87-%D8%A2%D9%87%D9%86-%D8%B4%D9%87%D8%B1%DA%A9-%DA%AF%D9%84%D8%B3%D8%AA%D8%A7%D9%86-%D8%A8%D9%84%D9%88%D8%A7%D8%B1%D8%A7%D9%82%D8%A7%D9%82%DB%8C%D8%A7%D8%A7%D9%85%DB%8C%D8%B1%DA%A9%D8%A8%DB%8C%D8%B1/QaeNIPKk
+2026-01-07 20:18:12 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 620.595s
+2026-01-07 20:19:21 | ERROR    | app.main:internal_error_handler:157 - Internal error: 
+2026-01-07 20:19:47 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 582.441s
+2026-01-07 20:29:01 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 20:29:02 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 20:29:02 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 20:29:02 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 20:29:02 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 20:29:02 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 20:29:02 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 20:29:02 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 20:29:24 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:29:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.167s
+2026-01-07 20:29:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.276s
+2026-01-07 20:29:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.394s
+2026-01-07 20:29:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.497s
+2026-01-07 20:29:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.408s
+2026-01-07 20:29:54 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 20:30:24 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:30:50 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.105s
+2026-01-07 20:30:50 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.226s
+2026-01-07 20:30:52 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.121s
+2026-01-07 20:30:52 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.200s
+2026-01-07 20:30:54 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:31:24 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:31:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.166s
+2026-01-07 20:31:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.249s
+2026-01-07 20:31:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.280s
+2026-01-07 20:31:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.428s
+2026-01-07 20:31:54 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 20:32:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:32:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.090s
+2026-01-07 20:32:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.120s
+2026-01-07 20:32:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.147s
+2026-01-07 20:32:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.182s
+2026-01-07 20:32:55 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:33:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.004s
+2026-01-07 20:33:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.132s
+2026-01-07 20:33:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.232s
+2026-01-07 20:33:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.326s
+2026-01-07 20:33:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.388s
+2026-01-07 20:33:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.435s
+2026-01-07 20:33:55 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:34:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 20:34:42 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.097s
+2026-01-07 20:34:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.163s
+2026-01-07 20:34:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.193s
+2026-01-07 20:34:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.259s
+2026-01-07 20:34:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.365s
+2026-01-07 20:34:55 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:35:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:35:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.145s
+2026-01-07 20:35:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.275s
+2026-01-07 20:35:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.191s
+2026-01-07 20:35:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.198s
+2026-01-07 20:35:55 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:36:26 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.010s
+2026-01-07 20:36:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.175s
+2026-01-07 20:36:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.297s
+2026-01-07 20:36:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.293s
+2026-01-07 20:36:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.339s
+2026-01-07 20:36:56 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:37:26 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:37:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.225s
+2026-01-07 20:37:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.256s
+2026-01-07 20:37:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.320s
+2026-01-07 20:37:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.376s
+2026-01-07 20:37:56 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:38:26 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:38:32 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 20:38:32 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 20:38:32 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 20:38:32 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 20:38:33 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 20:38:33 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 20:38:34 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 20:38:34 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 20:41:21 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 20:41:22 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 20:41:22 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 20:41:22 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 20:41:22 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 20:41:22 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 20:41:22 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 20:41:22 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 20:41:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.320s
+2026-01-07 20:41:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.365s
+2026-01-07 20:41:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.333s
+2026-01-07 20:41:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.352s
+2026-01-07 20:41:43 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:42:13 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:42:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.197s
+2026-01-07 20:42:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.366s
+2026-01-07 20:42:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.363s
+2026-01-07 20:42:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.374s
+2026-01-07 20:42:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:43:14 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 20:43:42 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.158s
+2026-01-07 20:43:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.347s
+2026-01-07 20:43:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.361s
+2026-01-07 20:43:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.386s
+2026-01-07 20:43:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.389s
+2026-01-07 20:43:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:44:14 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:44:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.137s
+2026-01-07 20:44:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.172s
+2026-01-07 20:44:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.284s
+2026-01-07 20:44:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.336s
+2026-01-07 20:44:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.372s
+2026-01-07 20:44:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:45:14 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:45:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.221s
+2026-01-07 20:45:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.243s
+2026-01-07 20:45:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.254s
+2026-01-07 20:45:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.319s
+2026-01-07 20:45:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:46:14 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 20:46:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.118s
+2026-01-07 20:46:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.190s
+2026-01-07 20:46:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.234s
+2026-01-07 20:46:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.288s
+2026-01-07 20:46:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:47:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 20:47:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.160s
+2026-01-07 20:47:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.219s
+2026-01-07 20:47:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.120s
+2026-01-07 20:47:44 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.137s
+2026-01-07 20:47:45 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:48:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:48:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.126s
+2026-01-07 20:48:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.164s
+2026-01-07 20:48:45 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:49:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:49:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.254s
+2026-01-07 20:49:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.264s
+2026-01-07 20:49:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.340s
+2026-01-07 20:49:45 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 20:50:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:50:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.168s
+2026-01-07 20:50:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.173s
+2026-01-07 20:50:45 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:51:16 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.008s
+2026-01-07 20:51:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.196s
+2026-01-07 20:51:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.211s
+2026-01-07 20:51:46 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:52:16 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:52:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.221s
+2026-01-07 20:52:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.243s
+2026-01-07 20:52:46 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:53:16 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:53:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.163s
+2026-01-07 20:53:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.215s
+2026-01-07 20:53:46 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:54:16 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 20:54:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.167s
+2026-01-07 20:54:42 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.182s
+2026-01-07 20:54:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.229s
+2026-01-07 20:54:47 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:55:17 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 20:55:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.270s
+2026-01-07 20:55:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.314s
+2026-01-07 20:55:47 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.005s

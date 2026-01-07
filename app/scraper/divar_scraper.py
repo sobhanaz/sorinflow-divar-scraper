@@ -324,6 +324,9 @@ class DivarScraper:
             await self._simulate_scroll()
             await asyncio.sleep(1)
             
+            # Click "Show all details" button if it exists
+            await self._click_show_all_details()
+            
             # Get page content
             content = await self.page.content()
             soup = BeautifulSoup(content, 'lxml')
@@ -408,12 +411,12 @@ class DivarScraper:
         details = {}
         
         try:
-            # Look for info table/rows
-            info_rows = soup.select('.kt-group-row-item, .kt-base-row')
+            # Look for info table/rows - check both expanded and collapsed views
+            info_rows = soup.select('.kt-group-row-item, .kt-base-row, .kt-unexpandable-row')
             
             for row in info_rows:
-                title = row.select_one('.kt-group-row-item__title, .kt-base-row__title')
-                value = row.select_one('.kt-group-row-item__value, .kt-base-row__end')
+                title = row.select_one('.kt-group-row-item__title, .kt-base-row__title, .kt-unexpandable-row__title')
+                value = row.select_one('.kt-group-row-item__value, .kt-base-row__end, .kt-unexpandable-row__value')
                 
                 if not title or not value:
                     continue
@@ -421,8 +424,15 @@ class DivarScraper:
                 title_text = title.get_text(strip=True)
                 value_text = value.get_text(strip=True)
                 
-                if 'متراژ' in title_text:
+                # Building/land measurements
+                if 'متراژ زمین' in title_text:
+                    details['land_area'] = self._parse_persian_number(value_text)
+                elif 'متراژ' in title_text and 'زمین' not in title_text:
                     details['area'] = self._parse_persian_number(value_text)
+                elif 'زیربنا' in title_text:
+                    details['built_area'] = self._parse_persian_number(value_text)
+                
+                # Building specs
                 elif 'اتاق' in title_text:
                     rooms = self._parse_persian_number(value_text)
                     if rooms is None and 'بدون اتاق' in value_text:
@@ -437,6 +447,8 @@ class DivarScraper:
                         details['total_floors'] = self._parse_persian_number(parts[1])
                     else:
                         details['floor'] = self._parse_persian_number(value_text)
+                
+                # Amenities
                 elif 'آسانسور' in title_text:
                     details['has_elevator'] = 'دارد' in value_text
                 elif 'پارکینگ' in title_text:
@@ -445,12 +457,22 @@ class DivarScraper:
                     details['has_storage'] = 'دارد' in value_text
                 elif 'بالکن' in title_text:
                     details['has_balcony'] = 'دارد' in value_text
-                elif 'جهت ساختمان' in title_text:
+                
+                # Building info
+                elif 'جهت' in title_text:
                     details['building_direction'] = value_text
-                elif 'وضعیت واحد' in title_text:
+                elif 'بر' in title_text and 'متر' in value_text:
+                    details['frontage'] = self._parse_persian_number(value_text)
+                elif 'وضعیت' in title_text:
                     details['unit_status'] = value_text
                 elif 'سند' in title_text:
                     details['document_type'] = value_text
+                elif 'نوع کاربری' in title_text:
+                    details['usage_type'] = value_text
+                elif 'سن بنا' in title_text:
+                    details['building_age'] = value_text
+                elif 'نوع ملک' in title_text:
+                    details['property_type'] = value_text
         
         except Exception as e:
             logger.warning(f"Failed to extract property details: {e}")
@@ -530,7 +552,7 @@ class DivarScraper:
         
         try:
             # Look for the amenities/features section title
-            amenity_titles = ['امکانات', 'ویژگی', 'مشخصات']
+            amenity_titles = ['امکانات', 'ویژگی', 'مشخصات', 'توضیحات بیشتر']
             
             for title in amenity_titles:
                 # Find section with this title
@@ -543,24 +565,55 @@ class DivarScraper:
                         next_elem = section_parent.find_next_sibling()
                         if next_elem:
                             # Extract feature row items
-                            feature_items = next_elem.select('.kt-group-row-item__value, .kt-feature-row__title')
+                            feature_items = next_elem.select('.kt-group-row-item__value, .kt-feature-row__title, .kt-unexpandable-row__value')
                             for item in feature_items:
                                 text = item.get_text(strip=True)
-                                if text and text not in amenities:
+                                if text and text not in amenities and len(text) > 1:
                                     amenities.append(text)
-                    break
             
-            # Also look for common property amenities by icon names
-            amenity_keywords = ['پارکینگ', 'انباری', 'آسانسور', 'بالکن', 'لابی', 'سرایدار', 
-                               'استخر', 'سونا', 'جکوزی', 'کولر', 'شوفاژ', 'پکیج',
-                               'کف', 'سرویس', 'آشپزخانه', 'کمد', 'شومینه']
+            # Comprehensive list of property amenity keywords
+            amenity_keywords = [
+                # Basic amenities
+                'پارکینگ', 'انباری', 'آسانسور', 'بالکن', 'لابی', 'سرایدار',
+                # Luxury features 
+                'استخر', 'سونا', 'جکوزی', 'سالن ورزش', 'روف گاردن',
+                # Heating/Cooling
+                'کولر', 'شوفاژ', 'پکیج', 'رادیاتور', 'اسپلیت', 'چیلر',
+                # Flooring & Interior
+                'کف', 'پارکت', 'سرامیک', 'موزاییک', 'سنگ', 'کاشی',
+                'کمد', 'دیواری', 'شومینه',
+                # Kitchen & Bathroom
+                'سرویس', 'آشپزخانه', 'هود', 'کابینت', 'گاز',
+                # Building features
+                'اسکلت', 'فلزی', 'بتنی', 'نورگیر', 'حیاط', 'مشجر',
+                # Utilities
+                'برق', 'آب', 'گاز', 'تلفن', 'فاضلاب',
+                # Direction
+                'شمالی', 'جنوبی', 'شرقی', 'غربی',
+                # Status
+                'نوساز', 'بازسازی', 'نقاشی', 'کناف'
+            ]
             
-            all_text_elements = soup.select('.kt-group-row-item__value, .kt-unexpandable-row__title')
+            # Extract from all value elements
+            all_text_elements = soup.select('.kt-group-row-item__value, .kt-unexpandable-row__value, .kt-unexpandable-row__title')
             for elem in all_text_elements:
                 text = elem.get_text(strip=True)
+                # Check if contains any amenity keyword
                 if any(keyword in text for keyword in amenity_keywords):
-                    if text and text not in amenities:
+                    if text and text not in amenities and len(text) > 1:
                         amenities.append(text)
+            
+            # Also extract from description if it contains structured amenity info
+            desc_elem = soup.select_one('.kt-description-row__text')
+            if desc_elem:
+                desc_text = desc_elem.get_text()
+                # Extract line-by-line amenities from description
+                for line in desc_text.split('\n'):
+                    line = line.strip()
+                    if line and any(keyword in line for keyword in amenity_keywords):
+                        # Only add short lines that look like amenities
+                        if len(line) < 50 and line not in amenities:
+                            amenities.append(line)
                         
         except Exception as e:
             logger.warning(f"Failed to extract amenities: {e}")
@@ -583,6 +636,42 @@ class DivarScraper:
             logger.warning(f"Failed to extract images: {e}")
         
         return images
+    
+    async def _click_show_all_details(self) -> bool:
+        """Click 'Show all details' button to reveal hidden features"""
+        try:
+            # Selectors for "Show all details" button
+            show_all_selectors = [
+                'button:has-text("نمایش همهٔ جزئیات")',
+                'button:has-text("نمایش همه")',
+                'button:has-text("مشاهده بیشتر")',
+                '.kt-show-more-button',
+                'button.kt-button--secondary:has-text("جزئیات")',
+            ]
+            
+            for selector in show_all_selectors:
+                try:
+                    button = await self.page.query_selector(selector)
+                    if button:
+                        is_visible = await button.is_visible()
+                        if is_visible:
+                            logger.info(f"Found 'Show all details' button with selector: {selector}")
+                            await button.scroll_into_view_if_needed()
+                            await asyncio.sleep(0.3)
+                            await button.click(force=True, timeout=3000)
+                            logger.info("'Show all details' button clicked successfully")
+                            await asyncio.sleep(1.5)  # Wait for content to expand
+                            return True
+                except Exception as e:
+                    logger.debug(f"Failed with selector {selector}: {e}")
+                    continue
+            
+            logger.info("No 'Show all details' button found (content may already be expanded)")
+            return False
+            
+        except Exception as e:
+            logger.warning(f"Failed to click 'Show all details' button: {e}")
+            return False
     
     async def _get_phone_number(self) -> Optional[str]:
         """Click contact button and extract phone number"""

@@ -64,7 +64,9 @@ class Property(Base):
     deposit = Column(BigInteger)  # Deposit for rent
     
     # Property Details
-    area = Column(Integer)  # Square meters
+    area = Column(Integer)  # Square meters (built area)
+    land_area = Column(Integer)  # Land area in square meters
+    built_area = Column(Integer)  # Built/construction area
     rooms = Column(Integer)  # Number of bedrooms
     year_built = Column(Integer)  # Construction year
     floor = Column(Integer)  # Floor number
@@ -78,8 +80,11 @@ class Property(Base):
     
     # Additional Info
     building_direction = Column(String(50))  # North, South, etc.
+    frontage = Column(Integer)  # Building frontage/width in meters (بر)
     unit_status = Column(String(50))  # Empty, Tenant, Owner
     document_type = Column(String(100))  # Type of ownership document
+    usage_type = Column(String(100))  # Type of usage (residential, commercial, etc.)
+    building_age = Column(String(50))  # Building age description
     
     # Location
     city_id = Column(Integer, ForeignKey("cities.id"))

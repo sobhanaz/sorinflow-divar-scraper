@@ -1,222 +1,197 @@
-# SorinFlow Divar Scraper
+<div align="center">
 
-اسکرپر حرفه‌ای دیوار با قابلیت استخراج کامل اطلاعات ملک، شماره تماس و تصاویر
+# 🏠 SorinFlow Divar Scraper
 
-![Python](https://img.shields.io/badge/Python-3.11+-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green)
-![Playwright](https://img.shields.io/badge/Playwright-Stealth-orange)
-![Docker](https://img.shields.io/badge/Docker-Compose-blue)
+### Enterprise-Grade Web Scraping Solution for Divar.ir
 
-## ویژگی‌ها
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.109-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Playwright](https://img.shields.io/badge/Playwright-1.41-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Redis](https://img.shields.io/badge/Redis-7-DC382D?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/)
 
-- 🔒 **احراز هویت با OTP**: ورود به دیوار با شماره تلفن و کد یکبار مصرف
-- 🍪 **مدیریت کوکی**: ذخیره و بازیابی خودکار کوکی‌ها با اخطار انقضا
-- 🛡️ **Anti-Detection**: ماژول Stealth پیشرفته برای جلوگیری از شناسایی
-- 📱 **استخراج شماره تماس**: دریافت شماره تلفن آگهی‌دهندگان
-- 📸 **دانلود تصاویر**: ذخیره خودکار تصاویر ملک
-- 🏠 **اطلاعات کامل ملک**: متراژ، قیمت، آدرس، امکانات و...
-- 📊 **داشبورد مدیریت**: رابط کاربری RTL فارسی
-- 🔄 **Proxy Support**: پشتیبانی از پروکسی با rotation
-- 📈 **آمار و گزارشات**: نمودار و آمار کامل اسکرپ
+**A comprehensive, production-ready web scraping system for Divar.ir - Iran's largest classified ads platform**
 
-## پیش‌نیازها
+[Features](#-key-features) • [Quick Start](#-quick-start) • [Documentation](#-api-documentation) • [Architecture](#-architecture) • [Support](#-support)
 
-- Docker & Docker Compose
-- حداقل 2GB RAM
-- 20GB فضای ذخیره‌سازی
-
-## نصب سریع
-
-```bash
-# کلون پروژه
-git clone https://github.com/your-repo/sorinflow-divar-scraper.git
-cd sorinflow-divar-scraper
-
-# ایجاد فایل تنظیمات
-cp .env.example .env
-
-# راه‌اندازی
-chmod +x start.sh
-./start.sh
-```
-
-## تنظیمات (.env)
-
-```env
-# Database
-POSTGRES_USER=sorinflow
-POSTGRES_PASSWORD=your_secure_password
-POSTGRES_DB=divar_scraper
-
-# Redis
-REDIS_PASSWORD=your_redis_password
-
-# API
-SECRET_KEY=your_secret_key
-API_HOST=0.0.0.0
-API_PORT=8000
-
-# Scraper
-HEADLESS=true
-RATE_LIMIT_PER_MINUTE=20
-```
-
-## API Endpoints
-
-### احراز هویت
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/auth/login` | درخواست ارسال کد OTP |
-| POST | `/api/auth/verify` | تأیید کد و ورود |
-| GET | `/api/auth/status` | وضعیت لاگین |
-| GET | `/api/auth/cookies` | لیست کوکی‌ها |
-| DELETE | `/api/auth/cookies/{id}` | حذف کوکی |
-
-### اسکرپر
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/scraper/start` | شروع اسکرپ |
-| POST | `/api/scraper/stop/{job_id}` | توقف اسکرپ |
-| GET | `/api/scraper/jobs` | لیست job ها |
-| GET | `/api/scraper/jobs/{job_id}` | جزئیات job |
-| GET | `/api/scraper/logs/{job_id}` | لاگ‌های job |
-
-### ملک‌ها
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/properties` | لیست ملک‌ها |
-| GET | `/api/properties/{id}` | جزئیات ملک |
-| GET | `/api/properties/{id}/images` | تصاویر ملک |
-| DELETE | `/api/properties/{id}` | حذف ملک |
-| GET | `/api/properties/export` | خروجی CSV/JSON |
-
-### آمار
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/stats` | آمار کلی |
-| GET | `/api/stats/daily` | آمار روزانه |
-| GET | `/api/stats/cities` | آمار به تفکیک شهر |
-
-### پروکسی
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/proxies` | لیست پروکسی‌ها |
-| POST | `/api/proxies` | افزودن پروکسی |
-| PUT | `/api/proxies/{id}` | ویرایش پروکسی |
-| DELETE | `/api/proxies/{id}` | حذف پروکسی |
-| POST | `/api/proxies/{id}/test` | تست پروکسی |
-
-## شهرهای پشتیبانی شده
-
-تهران، کرج، شیراز، اصفهان، تبریز، مشهد، اهواز، قم، کرمانشاه، ارومیه، رشت، زاهدان، کرمان، همدان، یزد، اردبیل، بندرعباس، ساری، قزوین، زنجان
-
-## دسته‌بندی‌ها
-
-- خرید آپارتمان
-- فروش آپارتمان
-- اجاره آپارتمان
-- خرید ویلا
-- فروش ویلا
-- اجاره ویلا
-- خرید زمین
-- فروش زمین
-- و سایر دسته‌ها...
-
-## ساختار پروژه
-
-```
-sorinflow-divar-scraper/
-├── app/
-│   ├── api/
-│   │   └── routes/
-│   │       ├── auth.py
-│   │       ├── properties.py
-│   │       ├── proxies.py
-│   │       ├── scraper.py
-│   │       └── stats.py
-│   ├── models/
-│   │   ├── property.py
-│   │   ├── cookie.py
-│   │   ├── proxy.py
-│   │   └── scraping_job.py
-│   ├── scraper/
-│   │   ├── auth.py
-│   │   ├── divar_scraper.py
-│   │   └── stealth.py
-│   ├── config.py
-│   ├── database.py
-│   └── main.py
-├── frontend/
-│   ├── index.html
-│   ├── css/style.css
-│   └── js/app.js
-├── nginx/
-│   └── nginx.conf
-├── data/
-│   ├── images/
-│   └── cookies/
-├── docker-compose.yml
-├── Dockerfile
-├── requirements.txt
-└── init.sql
-```
-
-## دستورات مفید
-
-```bash
-# مشاهده لاگ‌ها
-docker compose logs -f backend
-
-# ری‌استارت سرویس‌ها
-docker compose restart
-
-# توقف سرویس‌ها
-docker compose down
-
-# پاک کردن کامل (با داده‌ها)
-docker compose down -v
-
-# ورود به کانتینر
-docker compose exec backend bash
-
-# اتصال به دیتابیس
-docker compose exec db psql -U sorinflow -d divar_scraper
-```
-
-## عیب‌یابی
-
-### مشکل اتصال به دیتابیس
-```bash
-docker compose logs db
-docker compose restart db
-```
-
-### مشکل Playwright
-```bash
-docker compose exec backend playwright install chromium
-```
-
-### کوکی منقضی شده
-از داشبورد مجدداً لاگین کنید یا:
-```bash
-curl -X POST http://localhost:8000/api/auth/login -d '{"phone": "09123456789"}'
-```
-
-## امنیت
-
-- از رمز عبور قوی برای دیتابیس استفاده کنید
-- SECRET_KEY را تغییر دهید
-- در محیط production از HTTPS استفاده کنید
-- Rate limit را بررسی و تنظیم کنید
-
-## لایسنس
-
-MIT License - استفاده آزاد با ذکر منبع
-
-## پشتیبانی
-
-برای گزارش مشکل یا پیشنهاد، Issue ایجاد کنید.
+</div>
 
 ---
 
-ساخته شده با ❤️ توسط SorinFlow
+## 🎯 Project Overview
+
+SorinFlow Divar Scraper is an **enterprise-grade automation solution** designed to extract comprehensive property data from Divar.ir with advanced anti-detection capabilities, authenticated phone number extraction, and real-time analytics dashboard.
+
+### 🚀 What Makes This Project Special?
+
+```
+✅ Production-Ready Architecture    ✅ Advanced Anti-Detection System
+✅ Authenticated Data Extraction    ✅ Real-Time Analytics Dashboard  
+✅ Scalable & Performant           ✅ One-Command Docker Deployment
+✅ 100% Async Operations           ✅ Enterprise Security Standards
+```
+
+---
+
+## 💎 Key Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔐 Authentication & Security
+- **OTP-Based Login**: Secure phone authentication
+- **Cookie Management**: Automatic session persistence
+- **Stealth Mode**: Advanced anti-bot detection
+- **Proxy Rotation**: Multiple proxy support
+- **Rate Limiting**: Intelligent request throttling
+- **Encrypted Storage**: Secure credential management
+
+</td>
+<td width="50%">
+
+### 🏗️ Technical Excellence
+- **Async Architecture**: Non-blocking I/O operations
+- **RESTful API**: Comprehensive FastAPI endpoints
+- **Real-Time Dashboard**: RTL Persian UI
+- **Database ORM**: SQLAlchemy async support
+- **Redis Caching**: High-performance data layer
+- **Docker Compose**: One-command deployment
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📊 Data Extraction
+- **Property Details**: Complete listing information
+- **Phone Numbers**: Authenticated contact extraction
+- **Images**: Automatic download & storage
+- **Amenities**: Full feature parsing
+- **Pricing**: Real-time market data
+- **Location**: GPS coordinates & addresses
+
+</td>
+<td width="50%">
+
+### 📈 Analytics & Monitoring
+- **Job Tracking**: Real-time scraping progress
+- **Statistics**: City-wise analytics
+- **Error Logging**: Comprehensive debugging
+- **Performance Metrics**: Response time tracking
+- **Export Functionality**: CSV/JSON data export
+- **Health Monitoring**: System status checks
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🏆 Technical Stack
+
+<div align="center">
+
+### Backend & Core
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)
+
+### Database & Cache
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+
+### DevOps & Infrastructure
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+### Frontend
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+</div>
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+```bash
+✅ Docker & Docker Compose (20.10+)
+✅ 2GB+ RAM
+✅ 20GB+ Disk Space
+✅ Linux/macOS/Windows (WSL2)
+```
+
+### Installation (3 Simple Steps)
+
+```bash
+# 1️⃣ Clone the repository
+git clone https://github.com/sobhanaz/sorinflow-divar-scraper.git
+cd sorinflow-divar-scraper
+
+# 2️⃣ Configure environment (optional - has sensible defaults)
+cp .env.example .env
+nano .env  # Edit if needed
+
+# 3️⃣ Launch with Docker Compose
+docker compose up -d
+```
+
+### 🎉 That's It! Your scraper is now running at:
+
+- 🌐 **Dashboard**: http://localhost/dashboard
+- 📚 **API Docs**: http://localhost:8000/api/docs
+- 💻 **API Base**: http://localhost:8000/api
+
+---
+
+## 📚 API Documentation
+
+### 🔐 Authentication Endpoints
+
+| Method | Endpoint | Description | Body |
+|--------|----------|-------------|------|
+| `POST` | `/api/auth/login` | Request OTP code | `{"phone": "09xxxxxxxxx"}` |
+| `POST` | `/api/auth/verify` | Verify OTP & login | `{"phone": "09xxx", "code": "12345"}` |
+| `GET` | `/api/auth/status` | Check login status | - |
+| `GET` | `/api/auth/cookies` | List saved cookies | - |
+| `DELETE` | `/api/auth/cookies/{id}` | Delete cookie session | - |
+
+### 🤖 Scraper Endpoints
+
+| Method | Endpoint | Description | Body |
+|--------|----------|-------------|------|
+| `POST` | `/api/scraper/start` | Start scraping job | `{"city": "urmia", "category": "buy-apartment", "max_pages": 10}` |
+| `POST` | `/api/scraper/jobs/{id}/cancel` | Stop running job | - |
+| `GET` | `/api/scraper/jobs` | List all jobs | Query: `?status=running&limit=20` |
+| `GET` | `/api/scraper/jobs/{id}` | Job details & progress | - |
+| `GET` | `/api/scraper/active-tasks` | Active scraping tasks | - |
+
+---
+
+<div align="center">
+
+### Built with ❤️ by [Sobhan Azimzadeh](https://github.com/sobhanaz)
+
+**CEO & Technical Leader @ [TECSO](https://tecso.team/) Digital Agency**
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-tecso.team-blue?style=flat-square)](https://tecso.team/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/sobhan-azimzadeh-b956aa234)
+[![GitHub](https://img.shields.io/github/followers/sobhanaz?style=flat-square&logo=github)](https://github.com/sobhanaz)
+
+*Transforming Ideas Into Profitable Digital Solutions Since 2018*
+
+---
+
+⭐ **Star this repo if you find it useful!** ⭐
+
+Last Updated: January 2026
+
+</div>
