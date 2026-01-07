@@ -191,11 +191,21 @@ async def get_system_health(
         )
         cookie = result.scalar_one_or_none()
         if cookie:
-            if cookie.expires_at and cookie.expires_at > datetime.now():
-                days_left = (cookie.expires_at - datetime.now()).days
-                cookie_status = f"valid ({days_left} days left)"
+            if cookie.expires_at:
+                # Handle timezone-aware vs naive datetime comparison
+                expires_at = cookie.expires_at
+                now = datetime.utcnow()
+                # Make comparison timezone-naive if needed
+                if hasattr(expires_at, 'tzinfo') and expires_at.tzinfo is not None:
+                    expires_at = expires_at.replace(tzinfo=None)
+                
+                if expires_at > now:
+                    days_left = (expires_at - now).days
+                    cookie_status = f"valid ({days_left} days left)"
+                else:
+                    cookie_status = "expired"
             else:
-                cookie_status = "expired"
+                cookie_status = "valid (no expiry)"
     except Exception:
         pass
     

@@ -235,12 +235,18 @@ async def get_available_categories():
     ]
 
 
+from pydantic import BaseModel
+
+class SingleScrapeRequest(BaseModel):
+    url: str
+
 @router.post("/scrape-single")
 async def scrape_single_property(
-    url: str,
+    request: SingleScrapeRequest,
     db: AsyncSession = Depends(get_db)
 ):
     """Scrape a single property by URL"""
+    url = request.url
     
     if "divar.ir/v/" not in url:
         raise HTTPException(status_code=400, detail="Invalid Divar property URL")

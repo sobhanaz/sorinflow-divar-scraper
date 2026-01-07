@@ -254,14 +254,20 @@ async def test_all_proxies(
     }
 
 
+from pydantic import BaseModel
+
+class ProxyImportRequest(BaseModel):
+    proxy_list: str
+
+
 @router.post("/import")
 async def import_proxies(
-    proxy_list: str,
+    request: ProxyImportRequest,
     db: AsyncSession = Depends(get_db)
 ):
     """Import proxies from a list (format: ip:port or ip:port:user:pass)"""
     
-    lines = proxy_list.strip().split("\n")
+    lines = request.proxy_list.strip().split("\n")
     imported = 0
     skipped = 0
     

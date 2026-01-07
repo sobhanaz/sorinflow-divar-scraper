@@ -67,9 +67,44 @@ async def verify_otp(
     auth = auth_instances[phone_number]
     
     try:
-        result = await auth.submit_otp_code(request.code)
+        result = await auth.submit_otp_code(request.code, phone_number)
         
         if result.get("success"):
+            # Ensure cookies are saved to database
+            cookies = result.get("cookies", [])
+            if cookies:
+                token_cookie = next((c for c in cookies if c.get("name") == "token"), None)
+                token_value = token_cookie.get("value") if token_cookie else None
+                
+                # Check if cookie already exists
+                existing = await db.execute(
+                    select(Cookie).where(Cookie.phone_number == phone_number)
+                )
+                existing_cookie = existing.scalar_one_or_none()
+                
+                from datetime import datetime
+                expires_at = None
+                if token_cookie and "expires" in token_cookie:
+                    expires_at = datetime.fromtimestamp(token_cookie["expires"])
+                
+                if existing_cookie:
+                    existing_cookie.cookies = cookies
+                    existing_cookie.token = token_value
+                    existing_cookie.is_valid = True
+                    existing_cookie.expires_at = expires_at
+                    existing_cookie.updated_at = datetime.now()
+                else:
+                    new_cookie = Cookie(
+                        phone_number=phone_number,
+                        cookies=cookies,
+                        token=token_value,
+                        is_valid=True,
+                        expires_at=expires_at
+                    )
+                    db.add(new_cookie)
+                
+                await db.commit()
+            
             # Cleanup auth instance
             await auth.close_browser()
             del auth_instances[phone_number]

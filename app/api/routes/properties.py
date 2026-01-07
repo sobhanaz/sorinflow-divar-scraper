@@ -16,9 +16,10 @@ from app.schemas import (
     PropertyUpdate
 )
 
-router = APIRouter()
+router = APIRouter(redirect_slashes=False)
 
 
+@router.get("", response_model=PropertyListResponse)
 @router.get("/", response_model=PropertyListResponse)
 async def get_properties(
     page: int = Query(1, ge=1),

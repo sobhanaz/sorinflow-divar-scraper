@@ -540,23 +540,68 @@ class DivarScraper:
     async def _get_phone_number(self) -> Optional[str]:
         """Click contact button and extract phone number"""
         try:
-            # Look for contact button
-            contact_button = await self.page.query_selector('button:has-text("اطلاعات تماس")')
+            # Try multiple selectors for contact button
+            contact_selectors = [
+                'button:has-text("اطلاعات تماس")',
+                'button:has-text("شماره تماس")',
+                'button:has-text("تماس")',
+                '[data-testid="contact-button"]',
+                '.kt-contact-row button',
+                'button.kt-button--primary:has-text("تماس")',
+            ]
+            
+            contact_button = None
+            for selector in contact_selectors:
+                try:
+                    contact_button = await self.page.query_selector(selector)
+                    if contact_button:
+                        logger.debug(f"Found contact button with selector: {selector}")
+                        break
+                except Exception:
+                    continue
             
             if contact_button:
                 await self._human_like_delay(0.5, 1)
                 await contact_button.click()
-                await asyncio.sleep(2)
+                await asyncio.sleep(3)  # Wait longer for modal/response
                 
-                # Wait for phone number to appear
-                phone_elem = await self.page.wait_for_selector('a[href^="tel:"]', timeout=5000)
+                # Try multiple selectors for phone number
+                phone_selectors = [
+                    'a[href^="tel:"]',
+                    '.kt-unexpandable-row__action a[href^="tel:"]',
+                    '[data-testid="phone-number"]',
+                    '.kt-base-row a[href^="tel:"]',
+                    'a.kt-unexpandable-row__action-btn',
+                ]
                 
-                if phone_elem:
-                    phone_text = await phone_elem.inner_text()
-                    # Convert Persian numbers
-                    phone = self._parse_persian_number(phone_text)
-                    if phone:
-                        return f"0{phone}" if not str(phone).startswith('0') else str(phone)
+                for selector in phone_selectors:
+                    try:
+                        phone_elem = await self.page.wait_for_selector(selector, timeout=3000)
+                        if phone_elem:
+                            # Get href attribute for cleaner phone extraction
+                            href = await phone_elem.get_attribute('href')
+                            if href and href.startswith('tel:'):
+                                phone_text = href.replace('tel:', '').strip()
+                            else:
+                                phone_text = await phone_elem.inner_text()
+                            
+                            # Convert Persian numbers
+                            phone = self._parse_persian_number(phone_text)
+                            if phone:
+                                phone_str = str(phone)
+                                # Ensure proper format
+                                if len(phone_str) == 10 and not phone_str.startswith('0'):
+                                    return f"0{phone_str}"
+                                elif len(phone_str) == 11 and phone_str.startswith('0'):
+                                    return phone_str
+                                elif len(phone_str) >= 10:
+                                    return phone_str
+                            logger.debug(f"Found phone: {phone_text}")
+                            break
+                    except Exception:
+                        continue
+            else:
+                logger.debug("No contact button found on page")
             
             return None
             
@@ -616,6 +661,19 @@ class DivarScraper:
         """Save property to database"""
         try:
             divar_id = property_data.get('divar_id')
+            
+            # Validate required fields
+            if not divar_id:
+                logger.warning("Cannot save property: missing divar_id")
+                return None
+            
+            if not property_data.get('title'):
+                logger.warning(f"Cannot save property {divar_id}: missing title")
+                return None
+            
+            if not property_data.get('url'):
+                logger.warning(f"Cannot save property {divar_id}: missing url")
+                return None
             
             # Check if exists
             result = await self.db_session.execute(

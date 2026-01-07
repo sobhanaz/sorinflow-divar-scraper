@@ -1,0 +1,126 @@
+{
+  "phone_number": "09058432452",
+  "cookies": [
+    {
+      "name": "refresh_token",
+      "value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaWQiOiJmZDA2ODliNy1iYmFjLTQ1YWEtYTNiNC04NDRhMjliZGNhZmMiLCJ1aWQiOiJmZWMyMWJkMy1mZWQ2LTQ5NjgtYTQ1ZC00ZDhiMzdjOWRjYWIiLCJ1c2VyIjoiMDkwNTg0MzI0NTIiLCJ2ZXJpZmllZF90aW1lIjoxNzY3ODAwMDYwLCJ0b2tlbl90eXBlIjoicmVmcmVzaF90b2tlbiIsImlzcyI6ImF1dGgiLCJ1c2VyLXR5cGUiOiJwZXJzb25hbCIsInVzZXItdHlwZS1mYSI6Itm-2YbZhCDYtNiu2LXbjCIsImV4cCI6MTc3MDM5MjA2MCwiaWF0IjoxNzY3ODAwMDYwfQ.S8iIyITnCOM7ljLtCfBBUirL8mVNkLu01lP5IHQ_4BFwZIg1CLALKF8z-bqiXNafZnuI7Ce8ILXNldSUKe1mOQ",
+      "domain": ".api.divar.ir",
+      "path": "/v8/auth",
+      "expires": 1770404660.952244,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "did",
+      "value": "f09ad1c5-052c-47b6-a461-019353066005",
+      "domain": ".divar.ir",
+      "path": "/",
+      "expires": 1802360025.197688,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "cdid",
+      "value": "6861cd59-88d4-496f-99bb-787aa9494606",
+      "domain": ".divar.ir",
+      "path": "/",
+      "expires": 1802360025.199265,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ff",
+      "value": "%7B%22f%22%3A%7B%22foreigner_payment_enabled%22%3Atrue%2C%22enable_filter_post_count_web%22%3Atrue%2C%22enable_non_lazy_image_post_card%22%3Atrue%2C%22device_fp_enable%22%3Atrue%2C%22enable-places-selector-online-search-web%22%3Atrue%7D%2C%22e%22%3A1767803625045%2C%22r%22%3A1767886425045%7D",
+      "domain": ".divar.ir",
+      "path": "/",
+      "expires": 1767886425.199395,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "referrer",
+      "value": "",
+      "domain": ".divar.ir",
+      "path": "/",
+      "expires": 1802360025.19978,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.1036422450.1767800027",
+      "domain": ".divar.ir",
+      "path": "/",
+      "expires": 1775576026,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1716977488.1767800029",
+      "domain": ".divar.ir",
+      "path": "/",
+      "expires": 1802360029.353852,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "theme",
+      "value": "light",
+      "domain": ".divar.ir",
+      "path": "/",
+      "expires": 1802360031.595998,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "test_cookie",
+      "value": "CheckForPermission",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1767800931.785598,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga_1G1K17N77F",
+      "value": "GS2.1.s1767800029$o1$g1$t1767800042$j47$l0$h0",
+      "domain": ".divar.ir",
+      "path": "/",
+      "expires": 1802360042.286774,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaWQiOiJmZDA2ODliNy1iYmFjLTQ1YWEtYTNiNC04NDRhMjliZGNhZmMiLCJ1aWQiOiJmZWMyMWJkMy1mZWQ2LTQ5NjgtYTQ1ZC00ZDhiMzdjOWRjYWIiLCJ1c2VyIjoiMDkwNTg0MzI0NTIiLCJ2ZXJpZmllZF90aW1lIjoxNzY3ODAwMDYwLCJpc3MiOiJhdXRoIiwidXNlci10eXBlIjoicGVyc29uYWwiLCJ1c2VyLXR5cGUtZmEiOiLZvtmG2YQg2LTYrti124wiLCJleHAiOjE3NzAzOTIwNjAsImlhdCI6MTc2NzgwMDA2MH0.h0sLnzZvcQ2OFXUe6nJShoQ0y8NB3V-58tAnbXkWssY",
+      "domain": ".divar.ir",
+      "path": "/",
+      "expires": 1802360060.975327,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "csid",
+      "value": "82e783609e2b9c2aa1",
+      "domain": ".divar.ir",
+      "path": "/",
+      "expires": 1802360061.487914,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "saved_at": "2026-01-07T15:34:22.147632"
+}

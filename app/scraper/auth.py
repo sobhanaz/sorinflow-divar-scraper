@@ -261,12 +261,13 @@ class DivarAuth:
             logger.error(result["message"])
             return result
     
-    async def submit_otp_code(self, code: str) -> Dict[str, Any]:
+    async def submit_otp_code(self, code: str, phone_number: str = None) -> Dict[str, Any]:
         """Submit OTP verification code"""
         result = {
             "success": False,
             "message": "",
-            "cookies": None
+            "cookies": None,
+            "phone_number": phone_number
         }
         
         try:
@@ -302,13 +303,15 @@ class DivarAuth:
                 result["message"] = "Login successful!"
                 result["cookies"] = cookies
                 
-                # Save cookies
-                phone_number = settings.divar_phone_number
-                await self.save_cookies_to_file(phone_number, cookies)
-                if self.db_session:
-                    await self.save_cookies_to_db(phone_number, cookies, token_cookie.get("value"))
-                
-                logger.info("Login successful, cookies saved!")
+                # Save cookies - use passed phone_number or fall back to settings
+                save_phone = phone_number or settings.divar_phone_number
+                if save_phone:
+                    await self.save_cookies_to_file(save_phone, cookies)
+                    if self.db_session:
+                        await self.save_cookies_to_db(save_phone, cookies, token_cookie.get("value"))
+                    logger.info(f"Login successful, cookies saved for {save_phone}!")
+                else:
+                    logger.warning("No phone number provided, cookies not saved")
             else:
                 result["message"] = "Login failed. Token cookie not found."
                 logger.error(result["message"])
