@@ -337,8 +337,8 @@ class DivarScraper:
                 "scraped_at": datetime.now()
             }
             
-            # Extract title - try multiple selectors
-            title_elem = soup.select_one('h1.kt-page-title__title, h1, .post-title')
+            # Extract title - use specific Divar selector
+            title_elem = soup.select_one('h1.kt-page-title__title.kt-page-title__title--responsive-sized, h1.kt-page-title__title, h1')
             if title_elem:
                 property_data["title"] = title_elem.get_text(strip=True)
             
@@ -363,6 +363,10 @@ class DivarScraper:
             # Extract images
             property_data["images"] = self._extract_images(soup)
             
+            # Set has_images flag if images were found
+            if property_data.get("images"):
+                property_data["has_images"] = True
+            
             # Get phone number (requires login)
             phone_number = await self._get_phone_number()
             if phone_number:
@@ -379,12 +383,13 @@ class DivarScraper:
         price_info = {}
         
         try:
-            # Look for price rows
-            rows = soup.select('.kt-base-row')
+            # Look for price rows - multiple selectors for different Divar layouts
+            rows = soup.select('.kt-base-row, .kt-unexpandable-row')
             
             for row in rows:
-                title = row.select_one('.kt-base-row__title, .kt-unexpandable-row__title')
-                value = row.select_one('.kt-unexpandable-row__value, .kt-base-row__end')
+                # Try multiple selector combinations
+                title = row.select_one('.kt-base-row__title, .kt-unexpandable-row__title, .kt-group-row-item__title')
+                value = row.select_one('.kt-unexpandable-row__value, .kt-base-row__end, .kt-group-row-item__value')
                 
                 if not title or not value:
                     continue
@@ -392,14 +397,24 @@ class DivarScraper:
                 title_text = title.get_text(strip=True)
                 value_text = value.get_text(strip=True)
                 
-                if 'قیمت کل' in title_text or 'قیمت' in title_text:
+                # Extract prices with more specific matching
+                if 'قیمت کل' in title_text:
                     price_info['total_price'] = self._parse_persian_number(value_text)
                 elif 'قیمت هر متر' in title_text:
                     price_info['price_per_meter'] = self._parse_persian_number(value_text)
-                elif 'اجاره' in title_text or 'اجارهٔ ماهانه' in title_text:
+                elif 'قیمت' in title_text and 'متر' not in title_text and 'total_price' not in price_info:
+                    # Generic price field (for buy properties)
+                    price_info['total_price'] = self._parse_persian_number(value_text)
+                elif 'اجاره' in title_text or 'اجارهٔ ماهانه' in title_text or 'اجاره‌بها' in title_text:
                     price_info['rent_price'] = self._parse_persian_number(value_text)
-                elif 'ودیعه' in title_text or 'رهن' in title_text:
+                elif 'ودیعه' in title_text or 'رهن' in title_text or 'پیش پرداخت' in title_text:
                     price_info['deposit'] = self._parse_persian_number(value_text)
+            
+            # Set default price field for compatibility
+            if 'total_price' in price_info and 'price' not in price_info:
+                price_info['price'] = price_info['total_price']
+            elif 'rent_price' in price_info and 'price' not in price_info:
+                price_info['price'] = price_info['rent_price']
             
         except Exception as e:
             logger.warning(f"Failed to extract price info: {e}")
@@ -412,11 +427,28 @@ class DivarScraper:
         
         try:
             # Look for info table/rows - check both expanded and collapsed views
+            # Updated selectors based on actual Divar HTML structure
             info_rows = soup.select('.kt-group-row-item, .kt-base-row, .kt-unexpandable-row')
             
+            # Also check for table-based layouts
+            table_rows = soup.select('table.kt-group-row tbody tr')
+            for table_row in table_rows:
+                cells = table_row.select('td.kt-group-row-item')
+                if len(cells) >= 2:
+                    title_cell = cells[0].select_one('.kt-group-row-item__title')
+                    value_cell = cells[1].select_one('.kt-group-row-item__value')
+                    if title_cell and value_cell:
+                        info_rows.append(table_row)
+            
             for row in info_rows:
+                # Try multiple selector combinations for title and value
                 title = row.select_one('.kt-group-row-item__title, .kt-base-row__title, .kt-unexpandable-row__title')
                 value = row.select_one('.kt-group-row-item__value, .kt-base-row__end, .kt-unexpandable-row__value')
+                
+                # For table rows, use td selector
+                if not title or not value:
+                    title = row.select_one('td.kt-group-row-item__title')
+                    value = row.select_one('td.kt-group-row-item__value')
                 
                 if not title or not value:
                     continue
@@ -438,7 +470,7 @@ class DivarScraper:
                     if rooms is None and 'بدون اتاق' in value_text:
                         rooms = 0
                     details['rooms'] = rooms
-                elif 'ساخت' in title_text or 'سال' in title_text:
+                elif 'ساخت' in title_text or ('سال' in title_text and 'ساخت' not in details):
                     details['year_built'] = self._parse_persian_number(value_text)
                 elif 'طبقه' in title_text:
                     if 'از' in value_text:
@@ -450,13 +482,17 @@ class DivarScraper:
                 
                 # Amenities
                 elif 'آسانسور' in title_text:
-                    details['has_elevator'] = 'دارد' in value_text
+                    details['has_elevator'] = 'دارد' in value_text or 'بله' in value_text
                 elif 'پارکینگ' in title_text:
-                    details['has_parking'] = 'دارد' in value_text
+                    details['has_parking'] = 'دارد' in value_text or 'بله' in value_text
                 elif 'انباری' in title_text:
-                    details['has_storage'] = 'دارد' in value_text
+                    details['has_storage'] = 'دارد' in value_text or 'بله' in value_text
                 elif 'بالکن' in title_text:
-                    details['has_balcony'] = 'دارد' in value_text
+                    details['has_balcony'] = 'دارد' in value_text or 'بله' in value_text
+                
+                # Images availability
+                elif 'تصویر' in title_text or 'عکس' in title_text:
+                    details['has_images'] = 'بله' in value_text or 'دارد' in value_text
                 
                 # Building info
                 elif 'جهت' in title_text:

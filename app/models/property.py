@@ -77,6 +77,7 @@ class Property(Base):
     has_parking = Column(Boolean, default=False)
     has_storage = Column(Boolean, default=False)
     has_balcony = Column(Boolean, default=False)
+    has_images = Column(Boolean, default=False)  # Whether property has images in listing
     
     # Additional Info
     building_direction = Column(String(50))  # North, South, etc.
