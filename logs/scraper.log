@@ -4722,3 +4722,242 @@ DETAIL:  Failing row contains (78, SF-20260107152525-CEF7C6, test, null, مور�
 2026-01-07 16:08:24 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.451s
 2026-01-07 16:08:42 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.092s
 2026-01-07 16:08:43 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 16:08:54 | WARNING  | app.scraper.divar_scraper:_get_phone_number:609 - Failed to get phone number: Timeout 30000ms exceeded.
+2026-01-07 16:08:55 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_1.webp
+2026-01-07 16:08:56 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_2.jpg
+2026-01-07 16:08:57 | INFO     | app.scraper.divar_scraper:save_property:705 - Saved new property: Qaah51sK with tag SF-20260107160856-78070A
+2026-01-07 16:08:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.244s
+2026-01-07 16:08:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.164s
+2026-01-07 16:09:01 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%88%D8%A7%D8%AD%D8%AF-%DB%B1%DB%B2%DB%B0-%D9%85%D8%AA%D8%B1%DB%8C-%D8%AF%D9%88-%D9%88%D8%A7%D8%AD%D8%AF-%D8%AD%D8%A7%D9%81%D8%B8-%DB%B2/QaLNvet5
+2026-01-07 16:09:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.748s
+2026-01-07 16:09:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.788s
+2026-01-07 16:09:12 | DEBUG    | app.scraper.divar_scraper:_get_phone_number:558 - Found contact button with selector: button:has-text("اطلاعات تماس")
+2026-01-07 16:09:14 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 16:09:20 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.298s
+2026-01-07 16:09:21 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.181s
+2026-01-07 16:09:21 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.153s
+2026-01-07 16:09:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.113s
+2026-01-07 16:09:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.187s
+2026-01-07 16:09:24 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.133s
+2026-01-07 16:09:43 | WARNING  | app.scraper.divar_scraper:_get_phone_number:609 - Failed to get phone number: Timeout 30000ms exceeded.
+2026-01-07 16:09:44 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_1.webp
+2026-01-07 16:09:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 16:09:45 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_2.jpg
+2026-01-07 16:09:45 | INFO     | app.scraper.divar_scraper:save_property:705 - Saved new property: QaLNvet5 with tag SF-20260107160945-A6F5EB
+2026-01-07 16:09:49 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%BE%DB%8C%D8%B4-%D9%81%D8%B1%D9%88%D8%B4-%D8%A2%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86-%DB%B1%DB%B6%DB%B0-%D9%85%D8%AA%D8%B1%DB%8C-%D8%A8%D8%B1-%D8%AE-%DB%B2%DB%B4-%D9%85%D8%AA%D8%B1%DB%8C/QadxhjFb
+2026-01-07 16:09:57 | DEBUG    | app.scraper.divar_scraper:_get_phone_number:558 - Found contact button with selector: button:has-text("اطلاعات تماس")
+2026-01-07 16:09:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.181s
+2026-01-07 16:09:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.269s
+2026-01-07 16:10:03 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.244s
+2026-01-07 16:10:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.451s
+2026-01-07 16:10:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.669s
+2026-01-07 16:10:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.011s
+2026-01-07 16:10:24 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.605s
+2026-01-07 16:10:28 | WARNING  | app.scraper.divar_scraper:_get_phone_number:609 - Failed to get phone number: Timeout 30000ms exceeded.
+2026-01-07 16:10:29 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_1.webp
+2026-01-07 16:10:29 | INFO     | app.scraper.divar_scraper:save_property:705 - Saved new property: QadxhjFb with tag SF-20260107161029-DFD9A7
+2026-01-07 16:10:33 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D8%A2%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86-%DB%B1%DB%B1%DB%B0-%D9%85%D8%AA%D8%B1%DB%8C-%D8%B7%D9%88%D8%A8%DB%8C/QaRVEya9
+2026-01-07 16:10:34 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.165s
+2026-01-07 16:10:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.334s
+2026-01-07 16:10:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.341s
+2026-01-07 16:10:44 | DEBUG    | app.scraper.divar_scraper:_get_phone_number:558 - Found contact button with selector: button:has-text("اطلاعات تماس")
+2026-01-07 16:10:45 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 16:10:59 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:10:59 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.167s
+2026-01-07 16:10:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.227s
+2026-01-07 16:10:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.269s
+2026-01-07 16:11:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.164s
+2026-01-07 16:11:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.191s
+2026-01-07 16:11:15 | WARNING  | app.scraper.divar_scraper:_get_phone_number:609 - Failed to get phone number: Timeout 30000ms exceeded.
+2026-01-07 16:11:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 16:11:16 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_1.webp
+2026-01-07 16:11:17 | INFO     | app.scraper.divar_scraper:save_property:705 - Saved new property: QaRVEya9 with tag SF-20260107161116-BD173B
+2026-01-07 16:11:21 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.005s
+2026-01-07 16:11:21 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.010s
+2026-01-07 16:11:21 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D9%88%D8%A7%D8%AD%D8%AF-110-%D9%85%D8%AA%D8%B1%DB%8C-%D8%B0%D9%88%D8%A7%D9%84%D9%81%D9%82%D8%A7%D8%B1%D8%B2%D8%A7%D8%AF%D9%87-%D8%B2%D8%A7%D8%AF%D9%87/Qae13yiO
+2026-01-07 16:11:21 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.437s
+2026-01-07 16:11:22 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.002s
+2026-01-07 16:11:22 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.002s
+2026-01-07 16:11:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.167s
+2026-01-07 16:11:22 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:11:22 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.233s
+2026-01-07 16:11:27 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.203s
+2026-01-07 16:11:29 | DEBUG    | app.scraper.divar_scraper:_get_phone_number:558 - Found contact button with selector: button:has-text("اطلاعات تماس")
+2026-01-07 16:11:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.171s
+2026-01-07 16:11:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.232s
+2026-01-07 16:11:43 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:11:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.096s
+2026-01-07 16:11:46 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 16:12:00 | WARNING  | app.scraper.divar_scraper:_get_phone_number:609 - Failed to get phone number: Timeout 30000ms exceeded.
+2026-01-07 16:12:01 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_1.webp
+2026-01-07 16:12:02 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_2.jpg
+2026-01-07 16:12:02 | INFO     | app.scraper.divar_scraper:save_property:705 - Saved new property: Qae13yiO with tag SF-20260107161202-1F8446
+2026-01-07 16:12:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.294s
+2026-01-07 16:12:04 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/jobs/911bb206-3860-4442-9e96-8e188ac2fcf1/cancel - 200 - 0.710s
+2026-01-07 16:12:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.968s
+2026-01-07 16:12:06 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D9%88%D8%A7%D8%AD%D8%AF%DB%B1%DB%B5%DB%B0%D9%85%D8%AA%D8%B1%DB%8C-%D8%AF%D9%88-%DA%A9%D9%84%D9%87-%D8%AF%D8%B1-%D8%A7%D9%85%DB%8C%D9%86/QaBFm3G1
+2026-01-07 16:12:19 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.009s
+2026-01-07 16:12:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.439s
+2026-01-07 16:12:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.439s
+2026-01-07 16:12:38 | DEBUG    | app.scraper.divar_scraper:_get_phone_number:558 - Found contact button with selector: button:has-text("اطلاعات تماس")
+2026-01-07 16:12:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.985s
+2026-01-07 16:12:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.985s
+2026-01-07 16:12:50 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.010s
+2026-01-07 16:13:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.565s
+2026-01-07 16:13:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.565s
+2026-01-07 16:13:09 | WARNING  | app.scraper.divar_scraper:_get_phone_number:609 - Failed to get phone number: Timeout 30000ms exceeded.
+2026-01-07 16:13:10 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_1.webp
+2026-01-07 16:13:11 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_2.jpg
+2026-01-07 16:13:12 | INFO     | app.scraper.divar_scraper:save_property:705 - Saved new property: QaBFm3G1 with tag SF-20260107161312-50B9DA
+2026-01-07 16:13:15 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%88%D8%A7%D8%AD%D8%AF%DB%B1%DB%B5%DB%B0%D9%85%D8%AA%D8%B1%DB%8C-%D9%85%D8%AD%D8%AA%D8%B4%D9%85/QaepHpJq
+2026-01-07 16:13:22 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.012s
+2026-01-07 16:13:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.715s
+2026-01-07 16:13:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.695s
+2026-01-07 16:13:25 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:13:25 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.705s
+2026-01-07 16:13:33 | DEBUG    | app.scraper.divar_scraper:_get_phone_number:558 - Found contact button with selector: button:has-text("اطلاعات تماس")
+2026-01-07 16:13:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.464s
+2026-01-07 16:13:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.478s
+2026-01-07 16:13:54 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.034s
+2026-01-07 16:14:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.726s
+2026-01-07 16:14:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.802s
+2026-01-07 16:14:04 | WARNING  | app.scraper.divar_scraper:_get_phone_number:609 - Failed to get phone number: Timeout 30000ms exceeded.
+2026-01-07 16:14:05 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_1.webp
+2026-01-07 16:14:06 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_2.jpg
+2026-01-07 16:14:06 | INFO     | app.scraper.divar_scraper:save_property:705 - Saved new property: QaepHpJq with tag SF-20260107161406-E67A5F
+2026-01-07 16:14:09 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D9%88%D8%A7%D8%AD%D8%AF-%D9%85%D8%B3%DA%A9%D9%88%D9%86%DB%8C-%D9%84%D9%88%DA%A9%D8%B3-%D8%AE%DB%8C%D8%A7%D8%A8%D8%A7%D9%86-%D8%B4%DB%8C%D8%AE-%D8%AA%D9%BE%D9%87/Qaeh3a94
+2026-01-07 16:14:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.169s
+2026-01-07 16:14:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.172s
+2026-01-07 16:14:27 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.015s
+2026-01-07 16:14:38 | DEBUG    | app.scraper.divar_scraper:_get_phone_number:558 - Found contact button with selector: button:has-text("اطلاعات تماس")
+2026-01-07 16:14:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.819s
+2026-01-07 16:14:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.964s
+2026-01-07 16:14:58 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.012s
+2026-01-07 16:15:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.393s
+2026-01-07 16:15:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.351s
+2026-01-07 16:15:05 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.212s
+2026-01-07 16:15:08 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.186s
+2026-01-07 16:15:09 | WARNING  | app.scraper.divar_scraper:_get_phone_number:609 - Failed to get phone number: Timeout 30000ms exceeded.
+2026-01-07 16:15:09 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_1.webp
+2026-01-07 16:15:10 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_2.jpg
+2026-01-07 16:15:11 | INFO     | app.scraper.divar_scraper:save_property:705 - Saved new property: Qaeh3a94 with tag SF-20260107161511-AA49C2
+2026-01-07 16:15:11 | DEBUG    | app.main:log_requests:106 - GET /api/properties/7 - 200 - 0.326s
+2026-01-07 16:15:14 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D9%88%D8%A7%D8%AD%D8%AF-%D9%85%DB%8C%D8%AF%D8%A7%D9%86-%D8%AA%DB%8C%D8%B1-%D8%A7%D8%B1%D8%AA%D8%B4/QaVRUsDw
+2026-01-07 16:15:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.307s
+2026-01-07 16:15:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.397s
+2026-01-07 16:15:25 | DEBUG    | app.scraper.divar_scraper:_get_phone_number:558 - Found contact button with selector: button:has-text("اطلاعات تماس")
+2026-01-07 16:15:28 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.004s
+2026-01-07 16:15:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.297s
+2026-01-07 16:15:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.305s
+2026-01-07 16:15:56 | WARNING  | app.scraper.divar_scraper:_get_phone_number:609 - Failed to get phone number: Timeout 30000ms exceeded.
+2026-01-07 16:15:57 | DEBUG    | app.scraper.divar_scraper:download_images:638 - Downloaded image: img_1.webp
+2026-01-07 16:15:58 | INFO     | app.scraper.divar_scraper:save_property:705 - Saved new property: QaVRUsDw with tag SF-20260107161558-0EA4D3
+2026-01-07 16:15:59 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 16:16:00 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 16:16:00 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 16:16:02 | INFO     | app.scraper.divar_scraper:start_scraping_job:773 - Property already exists: QaVRUsDw
+2026-01-07 16:16:02 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D8%A2%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86-%DB%B1%DB%B7%DB%B5%D9%85%D8%AA%D8%B1-%D8%A2%D8%B2%D8%A7%D8%AF%DA%AF%D8%A7%D9%86/QaehnDC-
+2026-01-07 16:16:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.256s
+2026-01-07 16:16:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.399s
+2026-01-07 16:16:22 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:16:22 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:16:22 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:16:22 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:16:22 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:16:22 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:16:22 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:16:22 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:16:31 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.138s
+2026-01-07 16:16:32 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.177s
+2026-01-07 16:16:38 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.213s
+2026-01-07 16:16:42 | DEBUG    | app.main:log_requests:106 - GET /api/proxies - 307 - 0.002s
+2026-01-07 16:16:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.156s
+2026-01-07 16:16:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.236s
+2026-01-07 16:16:43 | DEBUG    | app.main:log_requests:106 - GET /api/proxies/ - 200 - 0.222s
+2026-01-07 16:16:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.089s
+2026-01-07 16:16:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 16:16:46 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 200 - 0.201s
+2026-01-07 16:16:51 | INFO     | app.scraper.auth:apply_cookies:195 - Cookies applied to browser context
+2026-01-07 16:17:03 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.383s
+2026-01-07 16:17:03 | DEBUG    | app.main:log_requests:106 - GET /api/auth/cookies - 200 - 0.364s
+2026-01-07 16:17:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.408s
+2026-01-07 16:17:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.620s
+2026-01-07 16:17:14 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 16:17:15 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.129s
+2026-01-07 16:17:21 | ERROR    | app.scraper.auth:restore_session:376 - Failed to restore session: Timeout 30000ms exceeded.
+2026-01-07 16:17:21 | WARNING  | app.scraper.divar_scraper:initialize:94 - Session not restored. Some features may require login.
+2026-01-07 16:17:21 | INFO     | app.scraper.divar_scraper:start_scraping_job:748 - Starting scraping job for urmia/buy-apartment
+2026-01-07 16:17:21 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment
+2026-01-07 16:17:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.145s
+2026-01-07 16:17:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.262s
+2026-01-07 16:17:28 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.270s
+2026-01-07 16:17:29 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.288s
+2026-01-07 16:17:29 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.397s
+2026-01-07 16:17:36 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 9 listings on page 1
+2026-01-07 16:17:40 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=2
+2026-01-07 16:17:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.513s
+2026-01-07 16:17:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.699s
+2026-01-07 16:17:44 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 16:17:52 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/jobs/410b1d54-01e3-4662-bbaf-cefab59b47e1/cancel - 400 - 0.269s
+2026-01-07 16:17:52 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 2
+2026-01-07 16:17:56 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=3
+2026-01-07 16:18:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.993s
+2026-01-07 16:18:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.994s
+2026-01-07 16:18:15 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 16:18:16 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 3
+2026-01-07 16:18:18 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 16:18:18 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 16:18:19 | INFO     | app.main:lifespan:49 - Shutting down...
+2026-01-07 16:18:19 | INFO     | app.main:lifespan:52 - Shutdown complete
+2026-01-07 16:18:20 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=4
+2026-01-07 16:18:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.282s
+2026-01-07 16:18:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.434s
+2026-01-07 16:18:23 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.185s
+2026-01-07 16:18:37 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:18:37 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:18:38 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:18:38 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:18:38 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:18:38 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:18:38 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:18:38 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:18:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.212s
+2026-01-07 16:18:42 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.219s
+2026-01-07 16:18:44 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 200 - 0.338s
+2026-01-07 16:18:48 | INFO     | app.scraper.auth:apply_cookies:195 - Cookies applied to browser context
+2026-01-07 16:18:51 | INFO     | app.scraper.auth:restore_session:372 - Session restored successfully for 09058432452
+2026-01-07 16:18:51 | INFO     | app.scraper.divar_scraper:initialize:96 - Session restored successfully
+2026-01-07 16:18:51 | INFO     | app.scraper.divar_scraper:start_scraping_job:748 - Starting scraping job for urmia/buy-apartment
+2026-01-07 16:18:51 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment
+2026-01-07 16:19:01 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 16:19:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.493s
+2026-01-07 16:19:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.736s
+2026-01-07 16:19:09 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 9 listings on page 1
+2026-01-07 16:19:12 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=2
+2026-01-07 16:19:22 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.457s
+2026-01-07 16:19:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.317s
+2026-01-07 16:19:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.329s
+2026-01-07 16:19:25 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 2
+2026-01-07 16:19:30 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.149s
+2026-01-07 16:19:30 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=3
+2026-01-07 16:19:31 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 16:19:42 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 3
+2026-01-07 16:19:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.464s
+2026-01-07 16:19:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.467s
+2026-01-07 16:19:46 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=4
+2026-01-07 16:19:58 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 4
+2026-01-07 16:20:00 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=5
+2026-01-07 16:20:02 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 16:20:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.384s
+2026-01-07 16:20:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.484s
+2026-01-07 16:20:16 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 39 listings on page 5
+2026-01-07 16:20:19 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=6
+2026-01-07 16:20:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.174s
+2026-01-07 16:20:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.324s
+2026-01-07 16:20:30 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.152s
+2026-01-07 16:20:33 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 48 listings on page 6
+2026-01-07 16:20:33 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 16:20:36 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=7
+2026-01-07 16:20:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.790s
+2026-01-07 16:20:43 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.792s
+2026-01-07 16:20:55 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 7

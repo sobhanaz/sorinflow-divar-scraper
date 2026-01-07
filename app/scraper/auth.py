@@ -357,9 +357,12 @@ class DivarAuth:
             # Apply cookies
             await self.apply_cookies(cookies)
             
-            # Navigate and verify
-            await self.page.goto("https://divar.ir", wait_until="networkidle")
-            await asyncio.sleep(2)
+            # Navigate and verify - use domcontentloaded for faster loading
+            try:
+                await self.page.goto("https://divar.ir", wait_until="domcontentloaded", timeout=15000)
+                await asyncio.sleep(1)
+            except Exception as nav_error:
+                logger.warning(f"Navigation slow but continuing: {nav_error}")
             
             # Check if logged in
             current_cookies = await self.get_current_cookies()
