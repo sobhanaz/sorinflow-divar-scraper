@@ -4636,3 +4636,89 @@ DETAIL:  Failing row contains (78, SF-20260107152525-CEF7C6, test, null, مور�
 2026-01-07 16:04:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.730s
 2026-01-07 16:04:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.737s
 2026-01-07 16:04:29 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.008s
+2026-01-07 16:04:33 | WARNING  | app.scraper.divar_scraper:scrape_listing_page:245 - Primary selector not found, waiting more...
+2026-01-07 16:04:39 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 1.001s
+2026-01-07 16:04:46 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.606s
+2026-01-07 16:04:46 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 2.055s
+2026-01-07 16:04:55 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 9 listings on page 1
+2026-01-07 16:04:59 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=2
+2026-01-07 16:05:02 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.069s
+2026-01-07 16:05:06 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 1.242s
+2026-01-07 16:05:06 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.253s
+2026-01-07 16:05:18 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.585s
+2026-01-07 16:05:18 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.638s
+2026-01-07 16:05:22 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 48 listings on page 2
+2026-01-07 16:05:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.418s
+2026-01-07 16:05:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.666s
+2026-01-07 16:05:24 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.262s
+2026-01-07 16:05:25 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.155s
+2026-01-07 16:05:25 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=3
+2026-01-07 16:05:34 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.044s
+2026-01-07 16:05:43 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 48 listings on page 3
+2026-01-07 16:05:48 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=4
+2026-01-07 16:05:57 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.792s
+2026-01-07 16:05:57 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.009s
+2026-01-07 16:05:57 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.010s
+2026-01-07 16:05:57 | DEBUG    | app.main:log_requests:106 - GET / - 200 - 0.012s
+2026-01-07 16:05:58 | DEBUG    | app.main:log_requests:106 - GET /dashboard - 307 - 0.009s
+2026-01-07 16:05:58 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.002s
+2026-01-07 16:05:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.643s
+2026-01-07 16:05:59 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.009s
+2026-01-07 16:05:59 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:05:59 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.609s
+2026-01-07 16:05:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.644s
+2026-01-07 16:06:02 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 0.780s
+2026-01-07 16:06:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.570s
+2026-01-07 16:06:04 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 1.204s
+2026-01-07 16:06:04 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.183s
+2026-01-07 16:06:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.063s
+2026-01-07 16:06:04 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:06:04 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.352s
+2026-01-07 16:06:05 | DEBUG    | app.main:log_requests:106 - GET /api/auth/cookies - 200 - 0.290s
+2026-01-07 16:06:07 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.025s
+2026-01-07 16:06:08 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.363s
+2026-01-07 16:06:10 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 4
+2026-01-07 16:06:14 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=5
+2026-01-07 16:06:24 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.730s
+2026-01-07 16:06:24 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.758s
+2026-01-07 16:06:29 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 5
+2026-01-07 16:06:34 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=6
+2026-01-07 16:06:39 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.024s
+2026-01-07 16:06:44 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:06:44 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 1.132s
+2026-01-07 16:06:46 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.603s
+2026-01-07 16:06:56 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.319s
+2026-01-07 16:06:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.337s
+2026-01-07 16:06:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.451s
+2026-01-07 16:07:00 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 6
+2026-01-07 16:07:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.141s
+2026-01-07 16:07:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.231s
+2026-01-07 16:07:04 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=7
+2026-01-07 16:07:11 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.010s
+2026-01-07 16:07:21 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 7
+2026-01-07 16:07:23 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=8
+2026-01-07 16:07:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.359s
+2026-01-07 16:07:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.360s
+2026-01-07 16:07:35 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 8
+2026-01-07 16:07:38 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=9
+2026-01-07 16:07:42 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.016s
+2026-01-07 16:07:45 | DEBUG    | app.main:log_requests:106 - GET /api/properties - 200 - 1.014s
+2026-01-07 16:07:47 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.211s
+2026-01-07 16:07:53 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 24 listings on page 9
+2026-01-07 16:07:53 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.441s
+2026-01-07 16:07:57 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment?page=10
+2026-01-07 16:07:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.715s
+2026-01-07 16:07:59 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.710s
+2026-01-07 16:08:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.849s
+2026-01-07 16:08:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.852s
+2026-01-07 16:08:13 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.013s
+2026-01-07 16:08:13 | INFO     | app.scraper.divar_scraper:scrape_listing_page:270 - Found 51 listings on page 10
+2026-01-07 16:08:15 | INFO     | app.scraper.divar_scraper:start_scraping_job:766 - Found 435 total listings
+2026-01-07 16:08:15 | INFO     | app.scraper.divar_scraper:scrape_property_detail:319 - Scraping property detail: https://divar.ir/v/%D9%81%D8%B1%D9%88%D8%B4-%D8%A2%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86-%DB%B1%DB%B2%DB%B2%D9%85%D8%AA%D8%B1%DB%8C-%DA%AF%D9%84%D8%B4%D9%87%D8%B1-%DB%8C%DA%A9/Qaah51sK
+2026-01-07 16:08:23 | DEBUG    | app.scraper.divar_scraper:_get_phone_number:558 - Found contact button with selector: button:has-text("اطلاعات تماس")
+2026-01-07 16:08:23 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:08:23 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.393s
+2026-01-07 16:08:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.398s
+2026-01-07 16:08:24 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.451s
+2026-01-07 16:08:42 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.092s
+2026-01-07 16:08:43 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s

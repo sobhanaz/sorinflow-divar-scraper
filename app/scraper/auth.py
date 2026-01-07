@@ -151,12 +151,19 @@ class DivarAuth:
             cookie = result.scalar_one_or_none()
             
             if cookie:
-                # Check if expired
-                if cookie.expires_at and cookie.expires_at < datetime.now():
-                    cookie.is_valid = False
-                    await self.db_session.commit()
-                    logger.warning(f"Cookies expired for {phone_number}")
-                    return None
+                # Check if expired (handle timezone-aware vs naive datetime)
+                if cookie.expires_at:
+                    expires_at = cookie.expires_at
+                    now = datetime.utcnow()
+                    # Make comparison timezone-naive if needed
+                    if hasattr(expires_at, 'tzinfo') and expires_at.tzinfo is not None:
+                        expires_at = expires_at.replace(tzinfo=None)
+                    
+                    if expires_at < now:
+                        cookie.is_valid = False
+                        await self.db_session.commit()
+                        logger.warning(f"Cookies expired for {phone_number}")
+                        return None
                 return cookie.cookies
             return None
         except Exception as e:
