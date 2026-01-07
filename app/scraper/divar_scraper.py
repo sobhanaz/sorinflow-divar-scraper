@@ -490,31 +490,78 @@ class DivarScraper:
         return location
     
     def _extract_features(self, soup) -> List[str]:
-        """Extract property features"""
+        """Extract property features (NOT navigation breadcrumbs)"""
         features = []
         
         try:
-            feature_elems = soup.select('.kt-chip, .kt-group-row-item--feature')
+            # Only extract features from feature sections, NOT from navigation/search chips
+            # Feature rows are inside property details section
+            feature_elems = soup.select('.kt-group-row-item__value, .kt-feature-row__title')
             for elem in feature_elems:
                 text = elem.get_text(strip=True)
                 if text and text not in features:
                     features.append(text)
+            
+            # Also check for feature icons with text
+            icon_features = soup.select('.kt-group-row-item .kt-body--stable')
+            for elem in icon_features:
+                text = elem.get_text(strip=True)
+                # Filter out common non-property categories from navigation
+                unwanted_keywords = [
+                    'خودرو', 'موبایل', 'تلویزیون', 'کالای دیجیتال',
+                    'وسایل شخصی', 'خدمات', 'استخدام', 'حیوانات',
+                    'صندلی', 'نیمکت', 'اسباب', 'گوشی', 'لامپ',
+                    'پرنده', 'عروس', 'یخچال', 'میز', 'رایانه',
+                    'آموزش', 'نظافت', 'باغبانی', 'تعمیر', 'حمل',
+                    'فروشگاه', 'مغازه', 'کافه', 'رستوران'
+                ]
+                if text and text not in features:
+                    # Skip if it contains unwanted keywords
+                    if not any(keyword in text for keyword in unwanted_keywords):
+                        features.append(text)
         except Exception as e:
             logger.warning(f"Failed to extract features: {e}")
         
         return features
     
     def _extract_amenities(self, soup) -> List[str]:
-        """Extract property amenities"""
+        """Extract property amenities (parking, elevator, storage, etc.)"""
         amenities = []
         
         try:
-            amenity_section = soup.select_one('.kt-base-row__title:contains("امکانات")')
-            if amenity_section:
-                parent = amenity_section.find_parent()
-                if parent:
-                    chips = parent.select('.kt-chip')
-                    amenities = [c.get_text(strip=True) for c in chips]
+            # Look for the amenities/features section title
+            amenity_titles = ['امکانات', 'ویژگی', 'مشخصات']
+            
+            for title in amenity_titles:
+                # Find section with this title
+                amenity_section = soup.find('span', class_='kt-section-title__title', string=lambda x: x and title in x)
+                if amenity_section:
+                    # Get parent container
+                    section_parent = amenity_section.find_parent('div', class_='kt-section-title')
+                    if section_parent:
+                        # Find next sibling which should contain the features
+                        next_elem = section_parent.find_next_sibling()
+                        if next_elem:
+                            # Extract feature row items
+                            feature_items = next_elem.select('.kt-group-row-item__value, .kt-feature-row__title')
+                            for item in feature_items:
+                                text = item.get_text(strip=True)
+                                if text and text not in amenities:
+                                    amenities.append(text)
+                    break
+            
+            # Also look for common property amenities by icon names
+            amenity_keywords = ['پارکینگ', 'انباری', 'آسانسور', 'بالکن', 'لابی', 'سرایدار', 
+                               'استخر', 'سونا', 'جکوزی', 'کولر', 'شوفاژ', 'پکیج',
+                               'کف', 'سرویس', 'آشپزخانه', 'کمد', 'شومینه']
+            
+            all_text_elements = soup.select('.kt-group-row-item__value, .kt-unexpandable-row__title')
+            for elem in all_text_elements:
+                text = elem.get_text(strip=True)
+                if any(keyword in text for keyword in amenity_keywords):
+                    if text and text not in amenities:
+                        amenities.append(text)
+                        
         except Exception as e:
             logger.warning(f"Failed to extract amenities: {e}")
         
@@ -858,6 +905,12 @@ class DivarScraper:
             # Scrape listing pages
             all_listings = []
             for page_num in range(1, max_pages + 1):
+                # Check if job was cancelled
+                await self.db_session.refresh(job)
+                if job.status == "cancelled":
+                    logger.info(f"Job {job.job_id} was cancelled, stopping scraping")
+                    return job
+                
                 listings = await self.scrape_listing_page(city, category, page_num)
                 
                 if not listings:
@@ -876,6 +929,12 @@ class DivarScraper:
             # Scrape each property detail
             for i, listing in enumerate(all_listings):
                 try:
+                    # Check if job was cancelled
+                    await self.db_session.refresh(job)
+                    if job.status == "cancelled":
+                        logger.info(f"Job {job.job_id} was cancelled, stopping scraping")
+                        return job
+                    
                     # Check if already scraped
                     if await self.property_exists(listing['divar_id']):
                         logger.info(f"Property already exists: {listing['divar_id']}")

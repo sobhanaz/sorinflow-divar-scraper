@@ -7,6 +7,7 @@ from sqlalchemy import select
 from typing import Optional, List
 from datetime import datetime
 import asyncio
+import logging
 
 from app.database import get_db, get_redis
 from app.models.scraping_job import ScrapingJob
@@ -16,8 +17,9 @@ from app.schemas import ScrapingJobCreate, ScrapingJobResponse, ScrapingJobList
 
 router = APIRouter()
 settings = get_settings()
+logger = logging.getLogger(__name__)
 
-# Store active scraping tasks
+# Store active scraping tasks (job_id -> asyncio.Task)
 active_tasks = {}
 
 
@@ -94,17 +96,19 @@ async def start_scraping_job(
     
     # Start background task
     job_id = str(job.job_id)
-    active_tasks[job_id] = True
     
-    background_tasks.add_task(
-        run_scraping_job,
-        job_id,
-        job_config.city,
-        job_config.category,
-        job_config.max_pages,
-        job_config.download_images,
-        settings.database_url
+    # Create and store the asyncio task
+    task = asyncio.create_task(
+        run_scraping_job(
+            job_id,
+            job_config.city,
+            job_config.category,
+            job_config.max_pages,
+            job_config.download_images,
+            settings.database_url
+        )
     )
+    active_tasks[job_id] = task
     
     return ScrapingJobResponse(
         id=job.id,
@@ -210,8 +214,15 @@ async def cancel_scraping_job(
     job.completed_at = datetime.now()
     await db.commit()
     
-    # Remove from active tasks
+    # Cancel the actual asyncio task
     if job_id in active_tasks:
+        task = active_tasks[job_id]
+        if not task.done():
+            task.cancel()
+            try:
+                await task
+            except asyncio.CancelledError:
+                logger.info(f"Task {job_id} cancelled successfully")
         del active_tasks[job_id]
     
     return {"message": "Job cancelled successfully"}
