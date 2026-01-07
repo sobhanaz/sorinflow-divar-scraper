@@ -318,69 +318,285 @@ async function viewProperty(id) {
         modal.innerHTML = `
             <div class="property-detail">
                 ${property.images && property.images.length > 0 ? `
-                    <div class="images">
-                        ${property.images.map(img => `<img src="${img}" alt="تصویر ملک">`).join('')}
+                    <div class="mb-3">
+                        <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                ${property.images.map((img, idx) => `
+                                    <div class="carousel-item ${idx === 0 ? 'active' : ''}">
+                                        <img src="${img}" class="d-block w-100 rounded" alt="تصویر ${idx + 1}" style="max-height: 400px; object-fit: cover;">
+                                    </div>
+                                `).join('')}
+                            </div>
+                            ${property.images.length > 1 ? `
+                                <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            ` : ''}
+                        </div>
+                        <p class="text-center text-muted mt-2 small">
+                            <i class="bi bi-images"></i> ${property.images.length} تصویر
+                        </p>
+                    </div>
+                ` : '<div class="alert alert-secondary text-center mb-3"><i class="bi bi-image"></i> بدون تصویر</div>'}
+                
+                <h5 class="mb-3">${property.title}</h5>
+                
+                ${property.description ? `
+                    <div class="alert alert-light mb-3">
+                        <strong><i class="bi bi-card-text"></i> توضیحات:</strong>
+                        <p class="mb-0 mt-2">${property.description}</p>
                     </div>
                 ` : ''}
                 
-                <h5>${property.title}</h5>
-                <p class="text-muted">${property.description || 'بدون توضیحات'}</p>
-                
-                <div class="info-grid">
-                    <div class="info-item">
-                        <label>شناسه</label>
-                        <span>${property.tag_number}</span>
+                <!-- Basic Info -->
+                <div class="card mb-3">
+                    <div class="card-header bg-primary text-white">
+                        <i class="bi bi-info-circle"></i> اطلاعات پایه
                     </div>
-                    <div class="info-item">
-                        <label>شهر</label>
-                        <span>${property.city_name || '---'}</span>
-                    </div>
-                    <div class="info-item">
-                        <label>منطقه</label>
-                        <span>${property.district || '---'}</span>
-                    </div>
-                    <div class="info-item">
-                        <label>متراژ</label>
-                        <span>${formatNumber(property.area)} متر</span>
-                    </div>
-                    <div class="info-item">
-                        <label>تعداد اتاق</label>
-                        <span>${property.rooms || '---'}</span>
-                    </div>
-                    <div class="info-item">
-                        <label>سال ساخت</label>
-                        <span>${property.year_built || '---'}</span>
-                    </div>
-                    <div class="info-item">
-                        <label>قیمت کل</label>
-                        <span>${formatPrice(property.total_price)}</span>
-                    </div>
-                    <div class="info-item">
-                        <label>اجاره/ودیعه</label>
-                        <span>${formatPrice(property.rent_price)} / ${formatPrice(property.deposit)}</span>
-                    </div>
-                    <div class="info-item">
-                        <label>شماره تماس</label>
-                        <span>${property.phone_number 
-                            ? `<a href="tel:${property.phone_number}">${property.phone_number}</a>` 
-                            : '---'}</span>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="text-muted small">شناسه</label>
+                                <div><strong><code>${property.tag_number}</code></strong></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">شناسه دیوار</label>
+                                <div><code>${property.divar_id}</code></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">نوع آگهی</label>
+                                <div>${property.listing_type === 'buy' ? '🏷️ خرید' : '📋 اجاره'}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">نوع ملک</label>
+                                <div>${property.property_type || '---'}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">دسته‌بندی</label>
+                                <div>${property.category_name || '---'}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">دارای تصویر</label>
+                                <div>${property.has_images ? '✅ بله' : '❌ خیر'}</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="mt-3">
-                    <label>امکانات:</label>
-                    <div class="d-flex flex-wrap gap-1 mt-1">
-                        ${property.has_elevator ? '<span class="badge bg-primary">آسانسور</span>' : ''}
-                        ${property.has_parking ? '<span class="badge bg-primary">پارکینگ</span>' : ''}
-                        ${property.has_storage ? '<span class="badge bg-primary">انباری</span>' : ''}
-                        ${property.has_balcony ? '<span class="badge bg-primary">بالکن</span>' : ''}
+                <!-- Price Info -->
+                <div class="card mb-3">
+                    <div class="card-header bg-success text-white">
+                        <i class="bi bi-currency-exchange"></i> اطلاعات قیمت
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            ${property.total_price ? `
+                                <div class="col-md-6">
+                                    <label class="text-muted small">قیمت کل</label>
+                                    <div class="h5 text-success mb-0">${formatPrice(property.total_price)}</div>
+                                </div>
+                            ` : ''}
+                            ${property.price_per_meter ? `
+                                <div class="col-md-6">
+                                    <label class="text-muted small">قیمت هر متر</label>
+                                    <div class="h5 text-info mb-0">${formatPrice(property.price_per_meter)}</div>
+                                </div>
+                            ` : ''}
+                            ${property.rent_price ? `
+                                <div class="col-md-6">
+                                    <label class="text-muted small">اجاره ماهانه</label>
+                                    <div class="h5 text-warning mb-0">${formatPrice(property.rent_price)}</div>
+                                </div>
+                            ` : ''}
+                            ${property.deposit ? `
+                                <div class="col-md-6">
+                                    <label class="text-muted small">ودیعه</label>
+                                    <div class="h5 text-primary mb-0">${formatPrice(property.deposit)}</div>
+                                </div>
+                            ` : ''}
+                        </div>
                     </div>
                 </div>
                 
-                <div class="mt-3">
-                    <a href="${property.url}" target="_blank" class="btn btn-primary">
-                        <i class="bi bi-box-arrow-up-left"></i> مشاهده در دیوار
+                <!-- Property Details -->
+                <div class="card mb-3">
+                    <div class="card-header bg-info text-white">
+                        <i class="bi bi-house-door"></i> مشخصات ملک
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="text-muted small">متراژ</label>
+                                <div><strong>${property.area ? formatNumber(property.area) + ' متر' : '---'}</strong></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="text-muted small">متراژ زمین</label>
+                                <div>${property.land_area ? formatNumber(property.land_area) + ' متر' : '---'}</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="text-muted small">زیربنا</label>
+                                <div>${property.built_area ? formatNumber(property.built_area) + ' متر' : '---'}</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="text-muted small">تعداد اتاق</label>
+                                <div><strong>${property.rooms !== null && property.rooms !== undefined ? formatNumber(property.rooms) : '---'}</strong></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="text-muted small">طبقه</label>
+                                <div>${property.floor !== null && property.floor !== undefined ? formatNumber(property.floor) : '---'}</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="text-muted small">کل طبقات</label>
+                                <div>${property.total_floors ? formatNumber(property.total_floors) : '---'}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">سال ساخت</label>
+                                <div>${property.year_built ? formatNumber(property.year_built) : '---'}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">سن بنا</label>
+                                <div>${property.building_age || '---'}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">جهت ساختمان</label>
+                                <div>${property.building_direction || '---'}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">بر (متر)</label>
+                                <div>${property.frontage ? formatNumber(property.frontage) + ' متر' : '---'}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">وضعیت واحد</label>
+                                <div>${property.unit_status || '---'}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">نوع سند</label>
+                                <div>${property.document_type || '---'}</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">نوع کاربری</label>
+                                <div>${property.usage_type || '---'}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Location -->
+                <div class="card mb-3">
+                    <div class="card-header bg-warning text-dark">
+                        <i class="bi bi-geo-alt"></i> موقعیت مکانی
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="text-muted small">شهر</label>
+                                <div><strong>${property.city_name || '---'}</strong></div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="text-muted small">منطقه</label>
+                                <div>${property.district || '---'}</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="text-muted small">محله</label>
+                                <div>${property.neighborhood || '---'}</div>
+                            </div>
+                            ${property.address ? `
+                                <div class="col-12">
+                                    <label class="text-muted small">آدرس</label>
+                                    <div>${property.address}</div>
+                                </div>
+                            ` : ''}
+                            ${property.latitude && property.longitude ? `
+                                <div class="col-12">
+                                    <label class="text-muted small">مختصات جغرافیایی</label>
+                                    <div>
+                                        <a href="https://www.google.com/maps?q=${property.latitude},${property.longitude}" target="_blank" class="btn btn-sm btn-outline-primary">
+                                            <i class="bi bi-map"></i> مشاهده در نقشه
+                                        </a>
+                                    </div>
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Amenities -->
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <i class="bi bi-stars"></i> امکانات
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap gap-2">
+                            ${property.has_elevator ? '<span class="badge bg-success"><i class="bi bi-arrow-up"></i> آسانسور</span>' : '<span class="badge bg-light text-dark"><i class="bi bi-arrow-up"></i> بدون آسانسور</span>'}
+                            ${property.has_parking ? '<span class="badge bg-success"><i class="bi bi-p-square"></i> پارکینگ</span>' : '<span class="badge bg-light text-dark"><i class="bi bi-p-square"></i> بدون پارکینگ</span>'}
+                            ${property.has_storage ? '<span class="badge bg-success"><i class="bi bi-box"></i> انباری</span>' : '<span class="badge bg-light text-dark"><i class="bi bi-box"></i> بدون انباری</span>'}
+                            ${property.has_balcony ? '<span class="badge bg-success"><i class="bi bi-wind"></i> بالکن</span>' : '<span class="badge bg-light text-dark"><i class="bi bi-wind"></i> بدون بالکن</span>'}
+                        </div>
+                        ${property.amenities && property.amenities.length > 0 ? `
+                            <hr>
+                            <label class="text-muted small">سایر امکانات:</label>
+                            <div class="d-flex flex-wrap gap-1 mt-2">
+                                ${property.amenities.map(a => `<span class="badge bg-info">${a}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                        ${property.features && property.features.length > 0 ? `
+                            <hr>
+                            <label class="text-muted small">ویژگی‌ها:</label>
+                            <div class="d-flex flex-wrap gap-1 mt-2">
+                                ${property.features.map(f => `<span class="badge bg-primary">${f}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+                
+                <!-- Contact -->
+                <div class="card mb-3">
+                    <div class="card-header bg-danger text-white">
+                        <i class="bi bi-telephone"></i> اطلاعات تماس
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="text-muted small">شماره تماس</label>
+                                <div class="h5 mb-0">
+                                    ${property.phone_number 
+                                        ? `<a href="tel:${property.phone_number}" class="text-success">${property.phone_number}</a>` 
+                                        : '<span class="text-muted">---</span>'}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">فروشنده</label>
+                                <div>${property.seller_name || '---'}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Meta -->
+                <div class="card mb-3">
+                    <div class="card-body bg-light">
+                        <div class="row g-2 small text-muted">
+                            <div class="col-md-6">
+                                <i class="bi bi-clock"></i> اسکرپ شده: ${property.scraped_at ? new Date(property.scraped_at).toLocaleString('fa-IR') : '---'}
+                            </div>
+                            <div class="col-md-6">
+                                <i class="bi bi-pencil"></i> آخرین بروزرسانی: ${property.updated_at ? new Date(property.updated_at).toLocaleString('fa-IR') : '---'}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="d-flex gap-2">
+                    <a href="${property.url}" target="_blank" class="btn btn-primary flex-grow-1">
+                        <i class="bi bi-box-arrow-up-right"></i> مشاهده در دیوار
                     </a>
+                    <button class="btn btn-outline-danger" onclick="deleteProperty(${property.id}); bootstrap.Modal.getInstance(document.getElementById('propertyModal')).hide();">
+                        <i class="bi bi-trash"></i> حذف
+                    </button>
                 </div>
             </div>
         `;
