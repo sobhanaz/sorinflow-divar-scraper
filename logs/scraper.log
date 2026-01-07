@@ -4488,3 +4488,151 @@ DETAIL:  Failing row contains (78, SF-20260107152525-CEF7C6, test, null, مور�
 2026-01-07 15:47:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.197s
 2026-01-07 15:47:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
 2026-01-07 15:47:55 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 15:48:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.140s
+2026-01-07 15:48:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.263s
+2026-01-07 15:48:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.209s
+2026-01-07 15:48:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.248s
+2026-01-07 15:48:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 15:48:55 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:49:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.098s
+2026-01-07 15:49:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.155s
+2026-01-07 15:49:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.187s
+2026-01-07 15:49:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.225s
+2026-01-07 15:49:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 15:49:55 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:50:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.546s
+2026-01-07 15:50:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.788s
+2026-01-07 15:50:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.148s
+2026-01-07 15:50:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.227s
+2026-01-07 15:50:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:50:56 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:51:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.248s
+2026-01-07 15:51:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.260s
+2026-01-07 15:51:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.216s
+2026-01-07 15:51:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.298s
+2026-01-07 15:51:26 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:51:43 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 15:51:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.127s
+2026-01-07 15:51:56 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:52:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.164s
+2026-01-07 15:52:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.261s
+2026-01-07 15:52:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.147s
+2026-01-07 15:52:17 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 15:52:17 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.208s
+2026-01-07 15:52:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.219s
+2026-01-07 15:52:26 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:52:56 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 15:53:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.116s
+2026-01-07 15:53:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.156s
+2026-01-07 15:53:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.182s
+2026-01-07 15:53:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.205s
+2026-01-07 15:53:26 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:53:56 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:54:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.168s
+2026-01-07 15:54:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.231s
+2026-01-07 15:54:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.162s
+2026-01-07 15:54:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.232s
+2026-01-07 15:54:27 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 15:54:57 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.004s
+2026-01-07 15:55:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.218s
+2026-01-07 15:55:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.274s
+2026-01-07 15:55:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.186s
+2026-01-07 15:55:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.225s
+2026-01-07 15:55:27 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:55:57 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 15:56:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.166s
+2026-01-07 15:56:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.280s
+2026-01-07 15:56:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.130s
+2026-01-07 15:56:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.314s
+2026-01-07 15:56:27 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 15:56:43 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 15:56:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.147s
+2026-01-07 15:56:57 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 15:57:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.145s
+2026-01-07 15:57:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.208s
+2026-01-07 15:57:17 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 15:57:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.189s
+2026-01-07 15:57:17 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.196s
+2026-01-07 15:57:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.212s
+2026-01-07 15:57:27 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 15:57:58 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 15:58:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.303s
+2026-01-07 15:58:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.361s
+2026-01-07 15:58:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.292s
+2026-01-07 15:58:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.331s
+2026-01-07 15:58:28 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 15:58:58 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.004s
+2026-01-07 15:59:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.189s
+2026-01-07 15:59:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.225s
+2026-01-07 15:59:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.107s
+2026-01-07 15:59:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.223s
+2026-01-07 15:59:28 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 15:59:59 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.015s
+2026-01-07 16:00:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.879s
+2026-01-07 16:00:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.900s
+2026-01-07 16:00:18 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.851s
+2026-01-07 16:00:18 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 1.142s
+2026-01-07 16:00:30 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 16:01:01 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.012s
+2026-01-07 16:01:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.665s
+2026-01-07 16:01:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.671s
+2026-01-07 16:01:18 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.692s
+2026-01-07 16:01:18 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.688s
+2026-01-07 16:01:32 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.009s
+2026-01-07 16:01:43 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:01:43 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.477s
+2026-01-07 16:01:54 | DEBUG    | app.main:log_requests:106 - GET /api/proxies - 307 - 0.004s
+2026-01-07 16:01:55 | DEBUG    | app.main:log_requests:106 - GET /api/proxies/ - 200 - 0.199s
+2026-01-07 16:02:03 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.008s
+2026-01-07 16:02:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.303s
+2026-01-07 16:02:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.385s
+2026-01-07 16:02:14 | DEBUG    | app.main:log_requests:106 - POST /api/proxies/1/test - 200 - 0.512s
+2026-01-07 16:02:14 | DEBUG    | app.main:log_requests:106 - GET /api/proxies - 307 - 0.013s
+2026-01-07 16:02:14 | DEBUG    | app.main:log_requests:106 - GET /api/proxies/ - 200 - 0.154s
+2026-01-07 16:02:16 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.197s
+2026-01-07 16:02:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.186s
+2026-01-07 16:02:17 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:02:17 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.176s
+2026-01-07 16:02:33 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.003s
+2026-01-07 16:02:50 | DEBUG    | app.main:log_requests:106 - POST /api/proxies/3/test - 200 - 30.471s
+2026-01-07 16:02:50 | DEBUG    | app.main:log_requests:106 - GET /api/proxies - 307 - 0.001s
+2026-01-07 16:02:50 | DEBUG    | app.main:log_requests:106 - GET /api/proxies/ - 200 - 0.146s
+2026-01-07 16:02:51 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:02:51 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.091s
+2026-01-07 16:02:52 | DEBUG    | app.main:log_requests:106 - GET /api/auth/cookies - 200 - 0.113s
+2026-01-07 16:02:52 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.100s
+2026-01-07 16:03:04 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:03:04 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:03:04 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:03:04 | INFO     | app.main:lifespan:40 - Starting SorinFlow Divar Scraper...
+2026-01-07 16:03:04 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:03:04 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:03:04 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:03:04 | INFO     | app.main:lifespan:44 - Database initialized
+2026-01-07 16:03:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.274s
+2026-01-07 16:03:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.358s
+2026-01-07 16:03:22 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.247s
+2026-01-07 16:03:22 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/cities - 200 - 0.002s
+2026-01-07 16:03:22 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/categories - 200 - 0.002s
+2026-01-07 16:03:22 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:03:22 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.105s
+2026-01-07 16:03:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.180s
+2026-01-07 16:03:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 16:03:29 | DEBUG    | app.main:log_requests:106 - POST /api/scraper/start - 200 - 0.279s
+2026-01-07 16:03:30 | DEBUG    | app.main:log_requests:106 - GET /api/scraper/jobs - 200 - 0.158s
+2026-01-07 16:03:35 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 16:03:35 | INFO     | app.scraper.auth:apply_cookies:188 - Cookies applied to browser context
+2026-01-07 16:03:49 | DEBUG    | app.main:log_requests:106 - GET /api/.env - 404 - 0.008s
+2026-01-07 16:03:56 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
+2026-01-07 16:03:58 | DEBUG    | app.main:log_requests:106 - GET /api/test - 404 - 0.002s
+2026-01-07 16:04:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.304s
+2026-01-07 16:04:04 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.342s
+2026-01-07 16:04:06 | ERROR    | app.scraper.auth:restore_session:369 - Failed to restore session: Timeout 30000ms exceeded.
+2026-01-07 16:04:06 | WARNING  | app.scraper.divar_scraper:initialize:94 - Session not restored. Some features may require login.
+2026-01-07 16:04:06 | INFO     | app.scraper.divar_scraper:start_scraping_job:748 - Starting scraping job for urmia/buy-apartment
+2026-01-07 16:04:06 | INFO     | app.scraper.divar_scraper:scrape_listing_page:231 - Scraping listing page: https://divar.ir/s/urmia/buy-apartment
+2026-01-07 16:04:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.510s
+2026-01-07 16:04:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.597s
+2026-01-07 16:04:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.730s
+2026-01-07 16:04:23 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.737s
+2026-01-07 16:04:29 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.008s

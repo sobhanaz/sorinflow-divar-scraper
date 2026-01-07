@@ -7,6 +7,8 @@ let currentPage = 1;
 let cityChart = null;
 let trendChart = null;
 let loginPhoneNumber = '';
+let cookieStatus = { is_valid: false, has_cookies: false };
+let pendingScrapingAction = null;
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -466,6 +468,17 @@ async function startScraping(e) {
     const maxPages = parseInt(document.getElementById('scraper-pages').value);
     const downloadImages = document.getElementById('scraper-images').checked;
     
+    // Check cookie status before scraping
+    if (!cookieStatus.is_valid) {
+        pendingScrapingAction = { type: 'bulk', city, category, maxPages, downloadImages };
+        showCookieWarning();
+        return;
+    }
+    
+    await executeBulkScraping(city, category, maxPages, downloadImages);
+}
+
+async function executeBulkScraping(city, category, maxPages, downloadImages) {
     try {
         const result = await apiCall('/scraper/start', {
             method: 'POST',
@@ -554,6 +567,17 @@ async function scrapeSingle() {
         return;
     }
     
+    // Check cookie status before scraping
+    if (!cookieStatus.is_valid) {
+        pendingScrapingAction = { type: 'single', url };
+        showCookieWarning();
+        return;
+    }
+    
+    await executeSingleScraping(url);
+}
+
+async function executeSingleScraping(url) {
     try {
         const result = await apiCall('/scraper/scrape-single', {
             method: 'POST',
@@ -570,11 +594,63 @@ async function scrapeSingle() {
     }
 }
 
+// Cookie Warning Modal Functions
+function showCookieWarning() {
+    const message = document.getElementById('cookie-warning-message');
+    if (cookieStatus.has_cookies) {
+        message.textContent = 'نشست شما منقضی شده است. لطفاً دوباره وارد شوید.';
+    } else {
+        message.textContent = 'شما هنوز وارد حساب دیوار نشده‌اید.';
+    }
+    
+    const modal = new bootstrap.Modal(document.getElementById('cookieWarningModal'));
+    modal.show();
+    
+    // Setup continue button handler
+    document.getElementById('continue-scraping-btn').onclick = function() {
+        modal.hide();
+        continueScraping();
+    };
+}
+
+function continueScraping() {
+    if (!pendingScrapingAction) return;
+    
+    if (pendingScrapingAction.type === 'bulk') {
+        const { city, category, maxPages, downloadImages } = pendingScrapingAction;
+        executeBulkScraping(city, category, maxPages, downloadImages);
+    } else if (pendingScrapingAction.type === 'single') {
+        executeSingleScraping(pendingScrapingAction.url);
+    }
+    
+    pendingScrapingAction = null;
+}
+
+function goToAuthSection() {
+    // Close modal first
+    const modal = bootstrap.Modal.getInstance(document.getElementById('cookieWarningModal'));
+    if (modal) modal.hide();
+    
+    // Navigate to auth section
+    document.querySelectorAll('.section-content').forEach(el => {
+        el.style.display = 'none';
+    });
+    document.getElementById('section-auth').style.display = 'block';
+    
+    document.querySelectorAll('.nav-link').forEach(el => {
+        el.classList.remove('active');
+    });
+    
+    checkAuthStatus();
+    loadCookies();
+}
+
 // ==================== Authentication ====================
 
 async function checkCookieStatus() {
     try {
         const status = await apiCall('/auth/status');
+        cookieStatus = status; // Store globally
         
         const badge = document.getElementById('cookie-status');
         if (status.is_valid) {

@@ -469,6 +469,39 @@
         </div>
     </div>
 
+    <!-- Cookie Warning Modal -->
+    <div class="modal fade" id="cookieWarningModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title"><i class="bi bi-exclamation-triangle"></i> هشدار: بدون ورود به دیوار</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-warning mb-3">
+                        <i class="bi bi-info-circle"></i>
+                        <span id="cookie-warning-message">شما هنوز وارد حساب دیوار نشده‌اید یا نشست شما منقضی شده است.</span>
+                    </div>
+                    <p><strong>بدون ورود به حساب:</strong></p>
+                    <ul>
+                        <li>شماره تماس مالکان نمایش داده نمی‌شود</li>
+                        <li>برخی اطلاعات ممکن است در دسترس نباشد</li>
+                        <li>ممکن است با محدودیت‌های دیوار مواجه شوید</li>
+                    </ul>
+                    <p class="text-muted">آیا می‌خواهید بدون ورود ادامه دهید؟</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="goToAuthSection()">
+                        <i class="bi bi-key"></i> ورود به حساب
+                    </button>
+                    <button type="button" class="btn btn-warning" id="continue-scraping-btn">
+                        <i class="bi bi-play-fill"></i> ادامه بدون ورود
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Toast Container -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="toast" class="toast" role="alert">
