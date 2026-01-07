@@ -4482,3 +4482,9 @@ DETAIL:  Failing row contains (78, SF-20260107152525-CEF7C6, test, null, مور�
 2026-01-07 15:46:54 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.002s
 2026-01-07 15:47:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.144s
 2026-01-07 15:47:03 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.232s
+2026-01-07 15:47:17 | ERROR    | app.scraper.auth:load_cookies_from_db:163 - Failed to load cookies from database: can't compare offset-naive and offset-aware datetimes
+2026-01-07 15:47:17 | DEBUG    | app.main:log_requests:106 - GET /api/auth/status - 200 - 0.107s
+2026-01-07 15:47:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/health - 200 - 0.176s
+2026-01-07 15:47:17 | DEBUG    | app.main:log_requests:106 - GET /api/stats/dashboard - 200 - 0.197s
+2026-01-07 15:47:25 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
+2026-01-07 15:47:55 | DEBUG    | app.main:log_requests:106 - GET /health - 200 - 0.001s
