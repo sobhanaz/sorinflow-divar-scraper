@@ -164,6 +164,7 @@ docker compose up -d
 | `GET` | `/api/auth/cookies` | List saved cookies | - |
 | `DELETE` | `/api/auth/cookies/{id}` | Delete cookie session | - |
 
+
 ### 🤖 Scraper Endpoints
 
 | Method | Endpoint | Description | Body |
