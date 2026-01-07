@@ -1,0 +1,10 @@
+time="2026-01-07T03:00:02Z" level=warning msg="/root/sorinflow-divar-scraper/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container sorinflow_nginx Stopping 
+ Container sorinflow_nginx Stopped 
+time="2026-01-07T03:00:08Z" level=warning msg="/root/sorinflow-divar-scraper/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container sorinflow_db Waiting 
+ Container sorinflow_redis Waiting 
+ Container sorinflow_redis Healthy 
+ Container sorinflow_db Healthy 
+ Container sorinflow_nginx Starting 
+ Container sorinflow_nginx Started 
